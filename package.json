@@ -3,10 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "npm run dev --prefix mern/client",
+    "dev": "npm run dev --prefix mern/client --",
     "build": "npm run build --prefix mern/client",
     "start": "node mern/server/server.mjs",
-    "test": "node --test tests/recipes.test.mjs tests/advanced.test.mjs",
+    "test": "node --test tests/recipes.test.mjs tests/advanced.test.mjs tests/enhancement-errors.test.mjs tests/recipe-visuals.test.mjs",
     "setup": "npm ci --prefix mern/server && npm ci --prefix mern/client",
     "typecheck": "npm run typecheck --prefix mern/client"
   },

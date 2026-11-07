@@ -1,55 +1,98 @@
-import {useEffect,useRef,useState} from 'react';
+import {useEffect,useId,useRef,useState,type CSSProperties} from 'react';
+import {Focus,Layers3,MoveUpRight,Pause,Play,RotateCcw} from 'lucide-react';
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {SVGRenderer} from 'three/addons/renderers/SVGRenderer.js';
 import {scaledAmount} from './recipes.mjs';
+import {dishProfile,ingredientAppearance,ingredientContext} from './recipe-visuals.mjs';
+import {buildDishModel} from './dish-model';
 type Ingredient={name:string;amount:number;unit:string};
-type Recipe={id:string;name:string;servings:number;ingredients:Ingredient[]};
-function ingredientStyle(name:string){
- const n=name.toLowerCase();
- if(/spinach|basil|lettuce|broccoli|mint|parsley|pea|cucumber|scallion/.test(n))return {color:'#64954a',shape:'leaf'};
- if(/tomato|pepper|strawberr|salsa|kimchi/.test(n))return {color:'#d65a3b',shape:'round'};
- if(/carrot|sweet potato|mango|turmeric/.test(n))return {color:'#e9a248',shape:'cube'};
- if(/chicken|turkey|tofu|cheese|feta|bread|potato/.test(n))return {color:'#d7bd83',shape:'cube'};
- if(/beef|pork|mushroom|bean|lentil/.test(n))return {color:'#97765a',shape:'round'};
- if(/salmon|shrimp|tuna|fish/.test(n))return {color:'#db9a84',shape:'cube'};
- return {color:'#e2d7aa',shape:'round'};
-}
-export default function RecipeScene({recipe,servings}:{recipe:Recipe;servings:number}){
+type Recipe={id:string;name:string;servings:number;ingredients:Ingredient[];steps?:string[]};
+type Props={recipe:Recipe;servings:number;selectedIngredient?:string|null;onSelectIngredient?:(name:string|null)=>void};
+export default function RecipeScene({recipe,servings,selectedIngredient,onSelectIngredient}:Props){
  const host=useRef<HTMLDivElement>(null),api=useRef<{select:(i:number)=>void;spread:(v:number)=>void;rotate:(v:boolean)=>void;reset:()=>void}|null>(null);
- const [selected,setSelected]=useState(0),[spread,setSpread]=useState(0),[rotate,setRotate]=useState(false),[error,setError]=useState('');
+ const [localSelection,setLocalSelection]=useState<string|null>(null),[spread,setSpread]=useState(0),[rotate,setRotate]=useState(false),[error,setError]=useState('');
+ const selected=selectedIngredient===undefined?localSelection:selectedIngredient,selectedIndex=recipe.ingredients.findIndex(i=>i.name===selected);
+ const chooseRef=useRef<(index:number)=>void>(()=>{}),selectionRef=useRef(selectedIndex);
+ const sliderId=useId(),contextId=useId(),profile=dishProfile(recipe);
+ const ingredient=recipe.ingredients[selectedIndex],context=ingredient?ingredientContext(recipe,ingredient.name):null;
+ function choose(index:number){const name=index<0?null:recipe.ingredients[index]?.name||null;setLocalSelection(name);onSelectIngredient?.(name);}
+ chooseRef.current=choose;selectionRef.current=selectedIndex;
+ useEffect(()=>{setLocalSelection(null);setSpread(0);setRotate(false);},[recipe.id]);
  useEffect(()=>{
-  const container=host.current;if(!container)return;let renderer:THREE.WebGLRenderer,controls:OrbitControls,frame=0,disposed=false;const geometries:THREE.BufferGeometry[]=[],materials:THREE.Material[]=[];
-  const scene=new THREE.Scene();scene.background=new THREE.Color('#eeeadd');
-  const camera=new THREE.PerspectiveCamera(40,1,0.1,60);camera.position.set(5.4,5.7,6.2);
-  const items:THREE.Group[]=[],meshes:THREE.Mesh[]=[],targets:THREE.Vector3[]=[];
+  const container=host.current;if(!container)return;
+  let renderer:THREE.WebGLRenderer|SVGRenderer|undefined,controls:OrbitControls|undefined,frame=0,disposed=false,observer:ResizeObserver|undefined;
+  const scene=new THREE.Scene();scene.background=new THREE.Color('#eee9dc');
+  const camera=new THREE.PerspectiveCamera(36,1,.1,40),initial=new THREE.Vector3(3.6,5,5.6);camera.position.copy(initial);
+  let dish:ReturnType<typeof buildDishModel>,active=selectionRef.current,exploded=0,dirty=true;
+  const groundGeometry=new THREE.CircleGeometry(14,80),groundMaterial=new THREE.MeshStandardMaterial({color:'#e9e2d2',roughness:1});
+  const ground=new THREE.Mesh(groundGeometry,groundMaterial);ground.rotation.x=-Math.PI/2;ground.position.y=-.4;ground.receiveShadow=true;scene.add(ground);
+  const focusTarget=new THREE.Vector3(0,.25,0),target=new THREE.Vector3();
+  let onDown:(e:PointerEvent)=>void,onUp:(e:PointerEvent)=>void,onLost:(e:Event)=>void;
+  function cleanup(){
+   disposed=true;cancelAnimationFrame(frame);observer?.disconnect();
+   if(renderer){renderer.domElement.removeEventListener('pointerdown',onDown);renderer.domElement.removeEventListener('pointerup',onUp);renderer.domElement.removeEventListener('webglcontextlost',onLost);if(renderer instanceof THREE.WebGLRenderer)renderer.dispose();renderer.domElement.remove();}
+   controls?.dispose();dish?.dispose();groundGeometry.dispose();groundMaterial.dispose();api.current=null;
+  }
   try{
-   renderer=new THREE.WebGLRenderer({antialias:true,alpha:false});renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.domElement.setAttribute('aria-label','Interactive 3D ingredient plate for '+recipe.name);renderer.domElement.setAttribute('role','img');container.appendChild(renderer.domElement);
-   controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.enablePan=false;controls.minDistance=4;controls.maxDistance=13;controls.maxPolarAngle=Math.PI/2.05;controls.target.set(0,0.3,0);
-   scene.add(new THREE.HemisphereLight('#fff9e8','#a8aa8d',2.5));const light=new THREE.DirectionalLight('#ffffff',3);light.position.set(4,8,3);scene.add(light);
-   function add(geometry:THREE.BufferGeometry,color:string,parent:THREE.Object3D=scene){const material=new THREE.MeshStandardMaterial({color,roughness:0.6});const mesh=new THREE.Mesh(geometry,material);geometries.push(geometry);materials.push(material);parent.add(mesh);return mesh;}
-   const plate=add(new THREE.CylinderGeometry(2.55,2.35,0.16,64),'#faf8ef');plate.position.y=-0.08;
-   const rim=add(new THREE.TorusGeometry(2.38,0.1,12,72),'#f3f0e1');rim.rotation.x=Math.PI/2;rim.position.y=0.025;
-   const count=recipe.ingredients.length,portion=Math.min(1.35,Math.max(0.65,Math.sqrt(servings/recipe.servings)));
-   recipe.ingredients.forEach((ingredient,index)=>{
-    const group=new THREE.Group(),angle=index/count*Math.PI*2,radius=count>6?1.35:1.1,style=ingredientStyle(ingredient.name);group.position.set(Math.cos(angle)*radius,0.18,Math.sin(angle)*radius);targets.push(group.position.clone());scene.add(group);items.push(group);
-    for(let j=0;j<5;j++){
-     const geometry=style.shape==='cube'?new THREE.BoxGeometry(0.31,0.21,0.3):style.shape==='leaf'?new THREE.SphereGeometry(0.24,12,8):new THREE.SphereGeometry(0.19,16,10);
-     const mesh=add(geometry,style.color,group);if(style.shape==='leaf')mesh.scale.set(1,0.2,0.7);mesh.position.set(((j%3)-1)*0.28,Math.floor(j/3)*0.16,((j%2)-0.5)*0.25);mesh.rotation.y=(index+j)*0.7;mesh.userData.ingredient=index;meshes.push(mesh);
-    }
-    group.scale.setScalar(portion);
-   });
-   function select(i:number){meshes.forEach(m=>{const mat=m.material as THREE.MeshStandardMaterial;mat.emissive.set(m.userData.ingredient===i?'#655828':'#000000');mat.emissiveIntensity=m.userData.ingredient===i?0.28:0;});}
-   api.current={select,spread:v=>items.forEach((g,i)=>{g.position.copy(targets[i]).multiplyScalar(1+v*0.6);g.position.y=0.18+v*0.35;}),rotate:v=>{controls.autoRotate=v;},reset:()=>{camera.position.set(5.4,5.7,6.2);controls.target.set(0,0.3,0);controls.update();}};select(0);setSelected(0);setError('');
+   try{renderer=new THREE.WebGLRenderer({antialias:true,alpha:false});}catch{renderer=new SVGRenderer();renderer.setQuality('low');scene.remove(ground);scene.add(new THREE.AmbientLight('#fff8e9',.3));}
+   dish=buildDishModel(recipe,{lowPoly:renderer instanceof SVGRenderer});scene.add(dish.root);
+   if(renderer instanceof THREE.WebGLRenderer){renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,1.8));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.1;renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;}
+   renderer.domElement.setAttribute('aria-label','Interactive ingredient model of '+recipe.name);renderer.domElement.setAttribute('role','img');container.appendChild(renderer.domElement);
+   controls=new OrbitControls(camera,renderer.domElement as unknown as HTMLElement);controls.enableDamping=renderer instanceof THREE.WebGLRenderer;controls.addEventListener('change',()=>{dirty=true;});controls.enablePan=false;controls.minDistance=5;controls.maxDistance=12;controls.maxPolarAngle=Math.PI/2.12;controls.target.set(0,.25,0);controls.autoRotateSpeed=.65;
+   scene.add(new THREE.HemisphereLight('#fff7e5','#929b8a',2));
+   const light=new THREE.DirectionalLight('#fff6df',renderer instanceof THREE.WebGLRenderer?3.2:.65);light.position.set(-3,7,5);light.castShadow=true;light.shadow.mapSize.set(1024,1024);light.shadow.camera.left=-5;light.shadow.camera.right=5;light.shadow.camera.top=5;light.shadow.camera.bottom=-5;light.shadow.normalBias=.03;scene.add(light);
+   const fill=new THREE.DirectionalLight('#e6eff3',renderer instanceof THREE.WebGLRenderer?1:.15);fill.position.set(5,3,-2);scene.add(fill);
+   function select(index:number){
+    active=index;dirty=true;dish.halos.forEach((halo,n)=>{halo.visible=n===index;});
+    if(index>=0){const center=new THREE.Box3().setFromObject(dish.layers[index]).getCenter(new THREE.Vector3());focusTarget.set(center.x*.35,.25,center.z*.35);}else focusTarget.set(0,.25,0);
+   }
+   api.current={select,spread:value=>{exploded=value;dirty=true;},rotate:value=>{if(controls)controls.autoRotate=value;},reset:()=>{dirty=true;camera.position.copy(initial).multiplyScalar(Math.max(1,1.35/camera.aspect));focusTarget.set(0,.25,0);controls?.target.copy(focusTarget);controls?.update();}};
+   select(selectionRef.current);setError('');
    const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();let down={x:0,y:0};
-   const onDown=(e:PointerEvent)=>{down={x:e.clientX,y:e.clientY};};
-   const onUp=(e:PointerEvent)=>{if(Math.hypot(e.clientX-down.x,e.clientY-down.y)>6)return;const rect=renderer.domElement.getBoundingClientRect();pointer.set((e.clientX-rect.left)/rect.width*2-1,-(e.clientY-rect.top)/rect.height*2+1);raycaster.setFromCamera(pointer,camera);const hits=raycaster.intersectObjects(meshes);if(hits.length){const i=hits[0].object.userData.ingredient;setSelected(i);select(i);}};
-   renderer.domElement.addEventListener('pointerdown',onDown);renderer.domElement.addEventListener('pointerup',onUp);
-   const resize=new ResizeObserver(()=>{const width=container.clientWidth||300;renderer.setSize(width,330,false);camera.aspect=width/330;camera.updateProjectionMatrix();});resize.observe(container);
-   function animate(){if(disposed)return;controls.update();renderer.render(scene,camera);frame=requestAnimationFrame(animate);}animate();
-   return()=>{disposed=true;cancelAnimationFrame(frame);resize.disconnect();renderer.domElement.removeEventListener('pointerdown',onDown);renderer.domElement.removeEventListener('pointerup',onUp);controls.dispose();geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());renderer.dispose();renderer.domElement.remove();api.current=null;};
-  }catch{setError('3D is unavailable in this browser. You can still explore the ingredient quantities below.');return()=>{disposed=true;cancelAnimationFrame(frame);geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());renderer?.dispose();renderer?.domElement.remove();api.current=null;};}
- },[recipe.id,servings]);
- useEffect(()=>{api.current?.spread(spread);},[spread,recipe.id,servings]);
- useEffect(()=>{api.current?.rotate(rotate);},[rotate,recipe.id,servings]);
- return <div className="recipe-scene"><div ref={host} className="scene-canvas"/>{error&&<p className="alert alert-warning" role="status">{error}</p>}<p className="small text-muted mt-2">Drag to rotate, scroll or pinch to zoom. Choose an ingredient to highlight it. This is a stylized ingredient model, not a scan of the finished meal.</p><div className="row g-2 align-items-center"><div className="col-12 col-sm-6"><label className="form-label" htmlFor="ingredient-spacing">Spread ingredients</label><input id="ingredient-spacing" className="form-range" type="range" min="0" max="1" step="0.1" value={spread} onChange={e=>setSpread(Number(e.target.value))}/></div><div className="col-12 col-sm-6 d-flex gap-2 flex-wrap"><button className="btn btn-outline-secondary btn-sm" onClick={()=>setRotate(v=>!v)} aria-pressed={rotate}>{rotate?'Pause rotation':'Auto rotate'}</button><button className="btn btn-outline-secondary btn-sm" onClick={()=>api.current?.reset()}>Reset view</button></div></div><div className="ingredient-legend mt-3">{recipe.ingredients.map((i,n)=><button className={'btn btn-sm '+(selected===n?'btn-success':'btn-outline-secondary')} key={i.name} aria-pressed={selected===n} onClick={()=>{setSelected(n);api.current?.select(n);}}>{i.name} · {scaledAmount(i.amount,recipe.servings,servings)} {i.unit}</button>)}</div></div>;
+   onDown=e=>{down={x:e.clientX,y:e.clientY};};
+   onUp=e=>{
+    if(Math.hypot(e.clientX-down.x,e.clientY-down.y)>6||!renderer)return;
+    const rect=renderer.domElement.getBoundingClientRect();pointer.set((e.clientX-rect.left)/rect.width*2-1,-(e.clientY-rect.top)/rect.height*2+1);raycaster.setFromCamera(pointer,camera);
+    const hit=raycaster.intersectObjects(dish.pickable)[0];if(hit){const index=hit.object.userData.ingredient;chooseRef.current(index===active?-1:index);}
+   };
+   onLost=e=>{e.preventDefault();setError('The 3D view paused. Ingredient details are still available.');};
+   renderer.domElement.addEventListener('pointerdown',onDown);renderer.domElement.addEventListener('pointerup',onUp);renderer.domElement.addEventListener('webglcontextlost',onLost);
+   observer=new ResizeObserver(()=>{if(!renderer)return;const width=container.clientWidth||360,height=container.clientHeight||390;if(renderer instanceof THREE.WebGLRenderer)renderer.setSize(width,height,false);else renderer.setSize(width,height);camera.aspect=width/height;if(camera.aspect<1.35)camera.position.copy(initial).multiplyScalar(1.35/camera.aspect);camera.updateProjectionMatrix();dirty=true;});observer.observe(container);
+   const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+   let lastRender=0;
+   function animate(now=0){
+    if(disposed)return;
+    if(renderer instanceof SVGRenderer&&now-lastRender<140){frame=requestAnimationFrame(animate);return;}lastRender=now;
+    if(disposed||!controls||!renderer)return;
+    dish.layers.forEach((layer,n)=>{
+     target.copy(layer.userData.explode).multiplyScalar(exploded);if(n===active)target.y+=.29;if(layer.position.distanceToSquared(target)>.00001)dirty=true;layer.position.lerp(target,reduced||renderer instanceof SVGRenderer?1:.13);
+     layer.traverse(object=>{if(!(object instanceof THREE.Mesh))return;const material=object.material as THREE.MeshStandardMaterial;
+      const targetOpacity=active<0||n===active?1:.17;material.transparent=active>=0&&n!==active;if(Math.abs(material.opacity-targetOpacity)>.001)dirty=true;material.opacity=THREE.MathUtils.lerp(material.opacity,targetOpacity,reduced||renderer instanceof SVGRenderer?1:.16);material.depthWrite=!material.transparent;
+      material.emissive.set(n===active?'#7e5f29':'#000000');material.emissiveIntensity=n===active?.12:0;
+     });
+     dish.halos[n].position.copy(dish.halos[n].userData.basePosition).add(layer.position);
+    });
+    controls.target.lerp(focusTarget,renderer instanceof SVGRenderer?1:.1);controls.update();if(dirty||renderer instanceof THREE.WebGLRenderer){renderer.render(scene,camera);dirty=false;}frame=requestAnimationFrame(animate);
+   }animate();return cleanup;
+  }catch{setError('Your browser could not open 3D. Select any ingredient to explore its amount and recipe step.');cleanup();}
+ },[recipe.id]);
+ useEffect(()=>{api.current?.select(selectedIndex);},[selectedIndex,recipe.id]);
+ useEffect(()=>{api.current?.spread(spread);},[spread,recipe.id]);
+ useEffect(()=>{api.current?.rotate(rotate);},[rotate,recipe.id]);
+ return <div className="dish-explorer" style={{'--dish-accent':profile.accent} as CSSProperties}>
+  <header className="explorer-heading"><div><span className="explorer-eyebrow"><Layers3 size={13}/> THE DISH, DECONSTRUCTED</span><h3>{profile.kicker}</h3><p>Every ingredient has a part to play. Pick one to see it.</p></div><span className="explorer-count">{recipe.ingredients.length}<small>ingredients</small></span></header>
+  <div className="explorer-layout"><div className="explorer-stage">
+   <div ref={host} className={'scene-canvas'+(error?' scene-unavailable':'')}/>
+   <div className="stage-label" aria-live="polite"><span className="stage-dot"/>{ingredient?<><strong>{ingredient.name}</strong><span>In the spotlight</span></>:<><strong>{recipe.name}</strong><span>All the good stuff, together</span></>}</div>
+   <span className="stage-caption">Interactive ingredient illustration</span>
+   <div className="stage-actions"><button title={rotate?'Pause rotation':'Rotate the dish'} aria-label={rotate?'Pause rotation':'Rotate the dish'} aria-pressed={rotate} onClick={()=>setRotate(v=>!v)}>{rotate?<Pause size={15}/>:<Play size={15}/>}</button><button title="Reset camera" aria-label="Reset camera" onClick={()=>{setSpread(0);api.current?.reset();}}><RotateCcw size={15}/></button></div>
+   {error&&<p className="scene-error" role="status">{error}</p>}
+  </div><aside className="explorer-ingredients" aria-label="Spotlight an ingredient">
+   <div className="explorer-list-heading"><span>WHAT GOES IN</span><button className={selectedIndex<0?'is-active':''} aria-pressed={selectedIndex<0} onClick={()=>choose(-1)}>Show all</button></div>
+   <div className="ingredient-spotlight-list">{recipe.ingredients.map((item,index)=>{const appearance=ingredientAppearance(item.name);return <button key={item.name} className={'ingredient-spotlight'+(index===selectedIndex?' is-selected':'')} aria-pressed={index===selectedIndex} aria-describedby={index===selectedIndex?contextId:undefined} onClick={()=>choose(index===selectedIndex?-1:index)}><span className="ingredient-swatch" style={{background:appearance.color}}/><span className="ingredient-spotlight-name">{item.name}<small>{scaledAmount(item.amount,recipe.servings,servings)} {item.unit}</small></span>{index===selectedIndex?<Focus size={17}/>:<MoveUpRight size={15}/>}</button>;})}</div>
+  </aside></div>
+  <div className="explorer-context" id={contextId} aria-live="polite">{ingredient&&context?<><span className="context-number">{String(selectedIndex+1).padStart(2,'0')}</span><div><h4>{ingredient.name}<span>{scaledAmount(ingredient.amount,recipe.servings,servings)} {ingredient.unit}</span></h4><p>{context.note}</p><details key={ingredient.name}><summary>{context.step?'Find it in step '+context.step:'How to use it'}</summary><p>{context.instruction}</p></details></div></>:<><span className="context-number"><Focus size={23}/></span><div><h4>A closer look at your next meal</h4><p>Tap an ingredient or a piece of the dish. The selected layer lifts forward while the others fade.</p></div></>}</div>
+  <div className="explorer-controls"><label htmlFor={sliderId}><Layers3 size={15}/><span>Separate the layers</span><input id={sliderId} type="range" min="0" max="1" step=".05" value={spread} onChange={e=>setSpread(Number(e.target.value))}/></label><span>Drag to rotate · Pinch to zoom</span></div>
+ </div>;
 }

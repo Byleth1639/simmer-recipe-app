@@ -73,3 +73,39 @@ test('Stable Diffusion adapter authenticates and rejects non-image output',async
  assert.deepEqual(bytes,png);assert.equal(requestOptions.headers.Authorization,'Bearer '+env.SD_SERVICE_TOKEN);
  await assert.rejects(()=>generateStableDiffusion(recipes[0],env,async()=>({ok:true,headers:new Headers({'content-type':'text/html'})})),/unexpected response/);
 });
+
+test('generation catalog supplies distinct recipe-based requests without credentials',async()=>{
+ const {app}=fixture(),response=await request(app).get('/api/media/catalog');
+ assert.equal(response.status,200);assert.equal(response.body.recipes.length,105);
+ assert.equal(new Set(response.body.recipes.map(r=>r.generation.seed)).size,105);
+ for(const recipe of response.body.recipes){assert.ok(recipe.generation.prompt.includes(recipe.name));assert.match(recipe.generation.recipeHash,/^[a-f0-9]{8}$/);}
+ assert.ok(!JSON.stringify(response.body).includes(TOKEN));
+});
+test('collection generation requires owner access and queues only recipes without AI photos',async()=>{
+ const {app,calls}=fixture({IMAGE_DAILY_LIMIT:'150'});
+ assert.equal((await post(request(app),'/api/media/batches',{scope:'ungenerated'})).status,401);
+ await models.Recipe.updateOne({id:'avocado-toast'},{$set:{imageGenerated:true,image:'https://example.test/reviewed-ai.png'}});
+ const response=await post(request(app),'/api/media/batches',{scope:'ungenerated'}).set('Authorization','Bearer '+TOKEN);
+ assert.equal(response.status,202);assert.equal(response.body.queued,104);assert.equal(response.body.skipped,1);
+ await app.locals.imageWorker.drain();assert.equal(calls.images,1);
+ const status=await request(app).get('/api/media/batches/'+response.body.id).set('Authorization','Bearer '+TOKEN);
+ assert.equal(status.body.total,104);assert.equal(status.body.completed,1);assert.equal(status.body.queued,103);
+ assert.equal((await models.Recipe.findOne({id:'avocado-toast'})).image,'https://example.test/reviewed-ai.png');
+ await models.Recipe.bulkWrite(recipes.map(r=>({updateOne:{filter:{id:r.id},update:{$set:{image:r.image,imageGenerated:false},$unset:{imageRecipeHash:1}}}})));
+});
+test('batch daily limits are reported as deferred recipes instead of pretending completion',async()=>{
+ const {app}=fixture({IMAGE_DAILY_LIMIT:'3'});
+ const response=await post(request(app),'/api/media/batches',{scope:'ungenerated'}).set('Authorization','Bearer '+TOKEN);
+ assert.equal(response.status,202);assert.equal(response.body.queued,3);assert.equal(response.body.deferred,102);assert.match(response.body.reason,/daily generation limit/);
+});
+test('concurrent submissions share one active image job',async()=>{
+ const {app}=fixture();
+ const responses=await Promise.all([1,2].map(()=>post(request(app),'/api/media/jobs',{recipeId:'pesto-pasta',replace:true}).set('Authorization','Bearer '+TOKEN)));
+ assert.ok(responses.every(r=>r.status===202));assert.equal(responses[0].body.id,responses[1].body.id);assert.equal(await models.ImageJob.countDocuments({recipeId:'pesto-pasta'}),1);
+});
+test('editing recipe ingredients after queueing rejects the stale photo job',async()=>{
+ const {app,calls}=fixture();
+ const response=await post(request(app),'/api/media/jobs',{recipeId:'pesto-pasta',replace:true}).set('Authorization','Bearer '+TOKEN);
+ await models.Recipe.updateOne({id:'pesto-pasta'},{$push:{ingredients:{name:'spinach',amount:80,unit:'g'}}});await app.locals.imageWorker.drain();
+ const job=await models.ImageJob.findOne({id:response.body.id});assert.equal(job.status,'failed');assert.match(job.error,/recipe changed/);assert.equal(calls.images,0);assert.equal(job.activeKey,undefined);
+});

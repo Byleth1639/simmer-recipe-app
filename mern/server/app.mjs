@@ -7,7 +7,8 @@ import {shoppingRows} from '../../shared/recipes.mjs';
 import {AppError,featureStatus,requireAdmin} from './services/config.mjs';
 import {createEnhancer,validateOptions} from './services/enhance.mjs';
 import {createCloudImages} from './services/cloud-images.mjs';
-import {createImageWorker,enqueueImageJob} from './services/image-jobs.mjs';
+import {createImageWorker,enqueueImageJob,enqueuePhotoCollection} from './services/image-jobs.mjs';
+import {photoPrompt,recipeVisualKey,recipeImageSeed} from '../../shared/recipe-visuals.mjs';
 export function createApp({models,env=process.env,enhanceProvider,imageProvider,cloudProvider,startWorker=false}={}){
  const {Recipe,Favorite,Shopping,ImageJob}=models;
  const app=express();app.disable('x-powered-by');if(env.RENDER||env.TRUST_PROXY==='1')app.set('trust proxy',1);
@@ -49,6 +50,18 @@ export function createApp({models,env=process.env,enhanceProvider,imageProvider,
   const options=validateOptions(req.body||{});res.json(await enhance(recipe,options));
  });
  const photoLimit=rateLimit({windowMs:60000,limit:5,standardHeaders:'draft-8',legacyHeaders:false,message:{error:'Please wait a minute before submitting another photo.'}});
+ app.get('/api/media/catalog',async(req,res)=>{
+  const recipes=await Recipe.find().lean();res.json({recipes:recipes.map(recipe=>({...recipe,generation:{prompt:photoPrompt(recipe),recipeHash:recipeVisualKey(recipe),seed:recipeImageSeed(recipe)}}))});
+ });
+ app.post('/api/media/batches',photoLimit,async(req,res)=>{
+  requireAdmin(req,env);if(!featureStatus(env).imageGeneration)throw new AppError(503,'Connect the cloud image service before starting a photo batch, or use the cloud notebook.');
+  if(req.body?.scope!=='ungenerated')throw new AppError(400,'Choose the recipes that still need an AI photo.');
+  res.status(202).json(await enqueuePhotoCollection(models,env));
+ });
+ app.get('/api/media/batches/:id',async(req,res)=>{
+  requireAdmin(req,env);const jobs=await ImageJob.find({batchId:req.params.id}).lean();
+  res.json({id:req.params.id,total:jobs.length,completed:jobs.filter(j=>j.status==='completed').length,failed:jobs.filter(j=>j.status==='failed').length,queued:jobs.filter(j=>j.status==='queued').length,running:jobs.filter(j=>j.status==='running').length,errors:jobs.filter(j=>j.status==='failed').map(j=>({recipeId:j.recipeId,error:j.error})),finished:jobs.every(j=>['completed','failed'].includes(j.status))});
+ });
  app.post('/api/media/jobs',photoLimit,async(req,res)=>{
   requireAdmin(req,env);if(!featureStatus(env).imageGeneration)throw new AppError(503,'Configure the image service and Cloudinary before using photo studio.');
   const {recipeId,replace=false}=req.body||{};if(typeof recipeId!=='string'||typeof replace!=='boolean')throw new AppError(400,'Choose a recipe and whether to replace its photo.');
