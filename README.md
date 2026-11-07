@@ -1,105 +1,91 @@
-# Simmer — Recipe Kitchen
+# Simmer — Full-stack Recipe Kitchen
 
-A recipe discovery app with ingredient search, meal and diet filters, pantry matching, serving adjustments, step-by-step cooking mode, favorites and a persistent shopping list.
+A MERN recipe application with 105 recipes, search/filtering, pantry matching, serving adjustments, favorites, and shopping lists, plus optional AI and cloud-image features.
 
-## Two ways to run
+**Start with [SETUP.md](SETUP.md)** for GitHub/Render deployment, account setup, environment variables and verification.
 
-The same React UI and recipe utilities power both implementations:
+| Feature | Implementation |
+| --- | --- |
+| Frontend | React, TypeScript and Vite |
+| Backend / storage | Express, Node.js, MongoDB and Mongoose |
+| Responsive tools | Bootstrap 5.3 with custom Simmer styles |
+| Recipe variations | OpenAI Responses API, strict structured output, MongoDB cache and daily attempt limits |
+| Cloud images | Signed server-side Cloudinary uploads and a one-time existing-photo migration script |
+| Missing-photo generation | Separate Python/FastAPI Stable Diffusion service, Diffusers and a real fastai Learner inference adapter |
+| Interactive 3D | On-demand Three.js ingredient scene with orbit/zoom controls, ingredient selection, spacing and serving quantities |
 
-| Version | Frontend | Backend | Database |
-|---|---|---|---|
-| Hosted preview | React / Vinext | TypeScript Cloudflare Worker API | D1 / SQLite |
-| Standalone MERN | React / Vite | Node.js / Express | MongoDB / Mongoose |
+The 3D scene is a stylized ingredient visualization. The image model uses pretrained Stable Diffusion weights; this project does not train or fine-tune a model. AI suggestions and generated photos are not claims of kitchen testing or nutritional analysis.
 
-The hosted preview is not a MERN deployment. The standalone version under `mern/` is the MERN implementation. It has no ChatGPT dependency. Favorites and lists use an anonymous HttpOnly browser cookie rather than user accounts; clearing cookies starts a new collection. The standalone version does not provide cross-device sync or member login.
+## Layout
 
-## Run the MERN version on your computer
+- `mern/client/`: deployed React/Vite entrypoint and dependencies.
+- `shared/Kitchen.tsx`: recipe interface and existing kitchen features.
+- `shared/RecipeTools.tsx`: Bootstrap AI, photo-studio and 3D controls.
+- `shared/RecipeScene.tsx`: lazy-loaded Three.js scene and resource cleanup.
+- `shared/recipes.mjs`, `shared/additional-recipes.mjs`: recipe catalog and utility functions.
+- `mern/server/app.mjs`: Express routes, anonymous visitor cookies and request limits.
+- `mern/server/models.mjs`: MongoDB schemas, cached enhancements, jobs and usage counters.
+- `mern/server/services/`: OpenAI, Cloudinary and Stable Diffusion adapters and the photo worker.
+- `mern/server/scripts/migrate-media.mjs`: upload local catalog images to Cloudinary and update their URLs.
+- `image-service/`: separately deployed Python model service, Dockerfile and tests.
+- `public/`: existing local photo assets and photo credits.
+- `tests/`: recipe/data and Express/Mongoose integration tests.
 
-Prerequisites: Node.js 22.13+ and a local MongoDB server, or your own MongoDB Atlas connection string. Keep all the folders in this download together; the client and server import files from `shared/`.
+## Run locally
 
-1. Start MongoDB locally. A typical local connection is `mongodb://127.0.0.1:27017/simmer`.
-2. In `mern/server`, copy `.env.example` to `.env`, set `MONGODB_URI` and run:
+Use Node.js compatible with the supplied Vite version (Node 22.13+ works), Python 3.12 for the image service, and MongoDB or Atlas. Keep the full folder structure.
 
-```sh
-npm install
-npm run dev
-```
-
-3. In a second terminal, open `mern/client` and run:
-
-```sh
-npm install
-npm run dev
-```
-
-4. Open `http://localhost:5173`. Vite forwards `/api` requests to Express on port 3001.
-
-The backend creates MongoDB collections and adds the five starter recipes without overwriting existing recipes with the same IDs. Use MongoDB Compass to inspect the `recipes`, `favorites` and `shoppings` collections.
-
-### Deploy the MERN app independently
-
-Run `npm run build` inside `mern/client`. Express serves this generated `dist` folder and the API together. Deploy the whole repository with Node.js hosting and a MongoDB connection. Set these environment variables:
-
-- `MONGODB_URI`: your database connection string (server only)
-- `APP_ORIGIN`: your exact public HTTPS origin, e.g. `https://your-domain.example` (no trailing slash)
-- `NODE_ENV=production`: enables Secure cookies
-- `PORT`: your host normally supplies this
-
-Use a build command that installs the server and client dependencies and builds the client. Start with `node mern/server/server.mjs`. Keep the full folder structure so shared imports resolve. Test saved recipes and shopping items after deployment. Hosting/database services may have costs; no paid services are configured by this project.
-
-## Hosted preview local development
-
-From the project root, use the supplied pnpm lockfile:
+From the repository root:
 
 ```sh
-pnpm install --frozen-lockfile
-pnpm run build
-node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0000_daily_lockheed.sql
-pnpm run dev
+npm run setup
 ```
 
-Initialize the local database once. Hosted and local data are separate. Publishing helpers and `.openai/hosting.json` belong to the existing hosted preview; use your own hosting configuration when deploying elsewhere.
+Copy `mern/server/.env.example` to `mern/server/.env` and configure MongoDB. From `mern/server`, run `npm run dev`. In a second terminal, from `mern/client`, run `npm run dev`. Open `http://localhost:5173`; the Vite proxy forwards `/api` to port 3001.
 
-## What works
+The basic application, Bootstrap UI and 3D visualization do not require third-party API keys. Optional features report that they are not enabled until their server credentials are configured. Keep real `.env` files, API keys and model weights out of GitHub.
 
-- Five original starter recipes with illustrative food photography.
-- Search by words in the title, description or ingredients.
-- Meal, diet and cooking-time filters.
-- Pantry matching: enter comma-separated ingredient fragments. Recipes with any matching ingredient are ranked by number of matching ingredients. This is deterministic matching, not AI.
-- Saved favorites and a server-persisted shopping list, isolated by anonymous browser cookie.
-- Serving counts from 1 to 12, scaled ingredient quantities, prep checkboxes and cooking steps.
-- Combining matching shopping ingredients with the same unit, checking items off and clearing checked items.
-- Responsive styles, keyboard-accessible native dialogs, loading states and error messages.
+## Deployment
 
-Adding a recipe to the shopping list again adds its quantities again. Servings can produce fractional ingredient quantities; adjust practically when cooking. Times are recipe estimates. Photos are illustrative, not photos of these exact instructions. See `CREDITS.md`.
+The website stays on Render with the same Atlas database. The Python image model runs on a separate suitable machine/host. Full instructions are in `SETUP.md`.
 
-## Not implemented
+Build from the repository root:
 
-- OpenAI recipe suggestions or recipe enhancement.
-- Stable Diffusion / fastAI image generation.
-- Three.js 3D recipe views.
-- Recipe editing, personal accounts or cross-device identity.
+```sh
+npm ci --omit=dev --prefix mern/server && npm ci --include=dev --prefix mern/client && npm run build --prefix mern/client
+```
 
-No API keys are needed for the current feature set. Do not claim those AI/3D features on a résumé unless you implement and verify them.
+Start:
+
+```sh
+node mern/server/server.mjs
+```
+
+Starter data inserts by stable IDs without overwriting recipe text. Existing shared local photo paths are migrated as in the earlier photo fix; custom, Cloudinary and generated URLs are preserved. The cloud migration and generated-photo worker update only image fields. Existing favorites and shopping lists remain stored under the same anonymous cookie.
 
 ## Verification
 
 ```sh
-node --test tests/recipes.test.mjs
-pnpm exec tsc --noEmit
-pnpm run build
+npm test
+npm run build
 ```
 
-Seven tests cover ingredient search, combined filters, pantry ranking, serving scaling, shopping conversion and starter-data integrity. The standalone Vite frontend is separately built, and the Express entrypoint is syntax checked. A live MongoDB-backed end-to-end test still requires a MongoDB instance; the hosted adapter is browser tested separately.
+`npm test` runs catalog checks and integration tests against a temporary MongoDB instance with simulated OpenAI/Cloudinary/image-service results. The integration tests do not use your Atlas database or API credits. The first test run downloads a MongoDB test binary.
 
-## Learn the code
+Python service tests:
 
-1. `shared/Kitchen.tsx`: React state, search controls, recipe dialog and API requests.
-2. `shared/recipes.mjs`: starter data, search, pantry matching and serving calculations.
-3. `mern/server/server.mjs`: MongoDB schemas and Express API.
-4. `app/api/kitchen/route.ts`: equivalent hosted Worker/D1 API.
-5. `db/schema.ts` and `drizzle/`: hosted database schema and migrations.
-6. `app/globals.css`: responsive visual design.
-7. `tests/recipes.test.mjs`: examples of edge cases to understand and extend.
+```sh
+cd image-service
+python -m pip install -r requirements-dev.txt
+python -m pytest -q
+```
 
-A good first contribution is adding your own recipe, then explaining how its ingredients travel from the recipe dialog to the shopping-list database. Next add recipe creation/editing or authenticated accounts. Measure actual use before writing résumé metrics.
+The Python tests execute the real fastai inference adapter with a tiny deterministic pipeline, HTTP authentication and safety-check rejection. They do not download full Stable Diffusion weights. A real model generation and live OpenAI/Cloudinary calls must be verified after configuring your own accounts. The browser validation covers the existing kitchen flows, Bootstrap controls, WebGL ingredient rendering, AI result display and photo-job polling with simulated external results.
+
+## Usage and limits
+
+Favorites and shopping lists are scoped to an anonymous browser cookie; there is no member login or cross-device account sync. Daily provider-attempt counters are stored in MongoDB and reset by UTC day. Cached AI results do not consume another provider attempt. Photo generation is owner-only; the owner token is entered in Photo studio and is not written to browser storage.
+
+The photo worker is intended for one Node web-service instance. It persists queued jobs in MongoDB and marks in-flight jobs failed after a restart so the owner can retry. Run a single Node instance for this version. Existing recipe text is not overwritten by AI suggestions.
+
+See `CREDITS.md` and `/photo-credits.html` for the supplied illustrative photos. Source images retain their individual licenses.

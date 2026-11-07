@@ -1,0 +1,10 @@
+torch==2.15.0
+torchvision==0.29.2
+fastai==2.8.12
+diffusers==0.42.1
+transformers==5.22.2
+accelerate==1.15.0
+fastapi==0.162.0
+uvicorn==0.54.0
+pillow==13.0.0
+safetensors==0.8.0

@@ -1,0 +1,13 @@
+import mongoose from 'mongoose';
+const {Schema}=mongoose;
+const model=(name,schema)=>mongoose.models[name]||mongoose.model(name,schema);
+export const Recipe=model('Recipe',new Schema({id:{type:String,required:true,unique:true},name:String,subtitle:String,description:String,category:String,cuisine:String,minutes:Number,servings:Number,diet:[String],image:String,imageCredit:String,imageSource:String,imageLicense:String,imageLicenseUrl:String,imageProvider:String,imagePublicId:String,imageGenerated:{type:Boolean,default:false},difficulty:String,ingredients:[{name:String,amount:Number,unit:String,_id:false}],steps:[String],tip:String},{versionKey:false}));
+const favoriteSchema=new Schema({visitor:{type:String,required:true},recipe:{type:String,required:true}},{versionKey:false});favoriteSchema.index({visitor:1,recipe:1},{unique:true});
+export const Favorite=model('Favorite',favoriteSchema);
+export const Shopping=model('Shopping',new Schema({id:{type:String,required:true,unique:true},visitor:{type:String,required:true},name:String,unit:String,amount:Number,checked:{type:Number,default:0}},{versionKey:false}));
+const enhancementSchema=new Schema({key:{type:String,required:true,unique:true},recipeId:String,result:Schema.Types.Mixed,expiresAt:Date},{versionKey:false});enhancementSchema.index({expiresAt:1},{expireAfterSeconds:0});
+export const Enhancement=model('Enhancement',enhancementSchema);
+export const ImageJob=model('ImageJob',new Schema({id:{type:String,required:true,unique:true},recipeId:String,status:{type:String,enum:['queued','running','completed','failed'],default:'queued'},replace:Boolean,previousImage:String,error:String,image:String,createdAt:{type:Date,default:Date.now},startedAt:Date,finishedAt:Date},{versionKey:false}));
+const usageSchema=new Schema({_id:String,count:{type:Number,default:0},expiresAt:Date},{versionKey:false});usageSchema.index({expiresAt:1},{expireAfterSeconds:0});
+export const Usage=model('Usage',usageSchema);
+export const models={Recipe,Favorite,Shopping,Enhancement,ImageJob,Usage};
