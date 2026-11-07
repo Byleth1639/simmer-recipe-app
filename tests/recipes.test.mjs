@@ -1,6 +1,8 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {existsSync,readFileSync,statSync} from 'node:fs';
+import {existsSync,readFileSync,statSync,readdirSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {recipePhotoUpdates} from '../shared/recipe-photo-updates.mjs';
 import {fileURLToPath} from 'node:url';
 import {recipes,filterRecipes,scaledAmount,shoppingRows} from '../shared/recipes.mjs';
 import {additionalRecipes} from '../shared/additional-recipes.mjs';
@@ -47,7 +49,7 @@ test('105 recipes retain all original IDs and add exactly 100 unique recipes',()
 });
 test('every recipe has usable content and valid ingredient quantities',()=>{
  for(const r of recipes){
-  for(const key of ['id','name','subtitle','description','cuisine','image','difficulty','tip'])
+  for(const key of ['id','name','subtitle','description','cuisine','difficulty','tip'])
    assert.ok(typeof r[key]==='string'&&r[key].trim().length>0,`${r.id}: ${key}`);
   assert.match(r.id,/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
   assert.ok(['Breakfast','Lunch','Dinner'].includes(r.category),r.id);
@@ -62,14 +64,11 @@ test('every recipe has usable content and valid ingredient quantities',()=>{
   }
  }
 });
-test('every recipe photo exists locally and is a nonempty JPEG',()=>{
- for(const r of recipes){
-  assert.match(r.image,/^\/food\/[a-z0-9-]+\.jpg$/);
-  const p=fileURLToPath(new URL('../public'+r.image,import.meta.url));
-  assert.ok(existsSync(p),r.image);assert.ok(statSync(p).size>1000,r.image);
-  assert.equal(readFileSync(p).subarray(0,2).toString('hex'),'ffd8',r.image);
- }
+test('all recipe seeds start without a bundled stock photo',()=>{
+ assert.ok(recipes.every(r=>r.image===''));
+ assert.ok(existsSync(new URL('../public/placeholder-recipe.svg',import.meta.url)));
 });
+
 test('shopping quantities scale safely for every recipe at 1, 3 and 12 servings',()=>{
  const before=JSON.stringify(recipes);
  for(const r of recipes){
@@ -109,4 +108,26 @@ test('root compatibility copies match the deployed shared recipe collection',asy
  const root=await import('../recipes.mjs');
  assert.deepEqual(root.recipes,recipes);
  assert.equal(readFileSync(new URL('../Kitchen.tsx',import.meta.url),'utf8'),readFileSync(new URL('../shared/Kitchen.tsx',import.meta.url),'utf8'));
+});
+
+test('the retired stock image bundle is absent from the app',()=>{
+ const files=readdirSync(new URL('../public',import.meta.url),{recursive:true});
+ assert.equal(files.filter(p=>/^food\//.test(p)&&/\.(jpe?g|png|webp)$/i.test(p)).length,0);
+});
+
+test('image information describes generated images rather than stock licenses',()=>{
+ const page=readFileSync(new URL('../public/photo-credits.html',import.meta.url),'utf8');
+ assert.match(page,/AI-generated/);assert.ok(!page.includes('commons.wikimedia.org'));
+});
+
+test('stock retirement only clears known stock metadata and protects AI photos',()=>{
+ const updates=recipePhotoUpdates(recipes);
+ assert.equal(updates.length,105);
+ assert.equal(new Set(updates.map(x=>x.updateOne.filter.id)).size,105);
+ for(const {updateOne:op} of updates){
+  assert.equal(op.upsert,false);assert.deepEqual(op.filter.imageGenerated,{$ne:true});
+  assert.equal(op.update.$set.image,'');assert.equal(op.update.$set.imageSource,'');
+  assert.ok(!op.filter.$or[0].image.$in.includes('/my-custom-photo.jpg'));
+ }
+ assert.deepEqual(recipePhotoUpdates(recipes),updates);
 });

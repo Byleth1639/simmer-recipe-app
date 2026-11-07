@@ -2,6 +2,8 @@ import crypto from 'node:crypto';
 import {AppError,positiveInt,reserveUsage} from './config.mjs';
 import {photoPrompt,recipeVisualKey,recipeImageSeed} from '../../../shared/recipe-visuals.mjs';
 export {photoPrompt};
+export const activeImageStatuses=['preparing','queued','running'];
+export const visibleJobStatus=job=>job.status==='preparing'?'queued':job.status;
 export async function generateStableDiffusion(recipe,env=process.env,fetchImpl=fetch){
  const url=new URL(env.SD_SERVICE_URL);if(!['https:','http:'].includes(url.protocol))throw new AppError(503,'Image service URL is invalid.');
  const r=await fetchImpl(url.toString().replace(/\/$/,'')+'/generate',{method:'POST',headers:{Authorization:'Bearer '+env.SD_SERVICE_TOKEN,'Content-Type':'application/json'},signal:AbortSignal.timeout(Math.max(30000,positiveInt(env.SD_REQUEST_TIMEOUT_MS,600000,1800000))),body:JSON.stringify({prompt:photoPrompt(recipe).slice(0,1600),seed:recipeImageSeed(recipe),steps:25})});
@@ -26,22 +28,34 @@ export function createImageWorker({Recipe,ImageJob},env,cloud,generate=generateS
     const updated=await Recipe.updateOne({id:recipe.id,image:recipe.image||{$in:[null,'']},name:recipe.name,ingredients:recipe.ingredients,steps:recipe.steps,description:recipe.description},{$set:{image:uploaded.url,imagePublicId:uploaded.publicId,imageProvider:'cloudinary',imageGenerated:true,imageRecipeHash:recipeVisualKey(recipe),imageSeed:recipeImageSeed(recipe),imageModel:env.SD_MODEL_ID||'stable-diffusion-v1-5/stable-diffusion-v1-5',imageCredit:'AI-generated illustration',imageSource:'',imageLicense:'',imageLicenseUrl:''}});
     if(!updated.matchedCount)throw new AppError(409,'The recipe photo changed while this image was being generated. The newer photo was kept.');
     await ImageJob.updateOne({id:job.id},{$set:{status:'completed',image:uploaded.url,finishedAt:new Date()},$unset:{activeKey:1}});
-   }catch(e){console.error('Image job failed:',e.message);await ImageJob.updateOne({id:job.id},{$set:{status:'failed',error:e instanceof AppError?e.message:'Image generation failed. Check the image-service configuration and logs.',finishedAt:new Date()},$unset:{activeKey:1}});}
+   }catch(e){console.error('Image job failed:',e.message);await ImageJob.updateOne({id:job.id},{$set:{status:'failed',failureKind:'provider',error:e instanceof AppError?e.message:'Image generation failed. Check the image-service configuration and logs.',finishedAt:new Date()},$unset:{activeKey:1}});}
   }finally{running=false;}
  }
  return {drain,async start(){
   // A restart cannot safely resume a provider call; queued jobs survive, in-flight jobs become retryable failures.
-  await ImageJob.updateMany({status:'running'},{$set:{status:'failed',error:'Server restarted during generation. Please submit the job again.',finishedAt:new Date()},$unset:{activeKey:1}});
+  await ImageJob.updateMany({status:{$in:['preparing','running']}},{$set:{status:'failed',failureKind:'interrupted',error:'Server restarted during generation. Please submit the job again.',finishedAt:new Date()},$unset:{activeKey:1}});
   timer=setInterval(()=>void drain().catch(e=>console.error('Image worker:',e.message)),1500);timer.unref();void drain();
  },stop(){stopped=true;clearInterval(timer);}};
 }
 export async function enqueueImageJob(models,recipe,replace,env,batchId){
- const active=await models.ImageJob.findOne({recipeId:recipe.id,status:{$in:['queued','running']}}).lean();if(active)return active;
+ const active=await models.ImageJob.findOne({recipeId:recipe.id,status:{$in:activeImageStatuses}}).lean();
+ if(active){
+  if(!active.recipeHash||active.recipeHash===recipeVisualKey(recipe))return active;
+  await models.ImageJob.updateOne({id:active.id,status:{$in:activeImageStatuses}},{$set:{status:'failed',failureKind:'stale',error:'The recipe changed after this photo was requested.',finishedAt:new Date()},$unset:{activeKey:1}});
+ }
  if(recipe.image&&!replace)throw new AppError(409,'This recipe already has a photo. Select “Replace existing photo” to generate another.');
- const queued=await models.ImageJob.countDocuments({status:{$in:['queued','running']}});if(queued>=positiveInt(env.IMAGE_QUEUE_LIMIT,120,250))throw new AppError(429,'The photo queue is full. Try again after a job finishes.');
- await reserveUsage(models.Usage,'image',positiveInt(env.IMAGE_DAILY_LIMIT,5));
- try{return await models.ImageJob.create({id:crypto.randomUUID(),recipeId:recipe.id,activeKey:recipe.id,replace,previousImage:recipe.image||'',recipeHash:recipeVisualKey(recipe),batchId,status:'queued'});}
- catch(error){if(error.code===11000){const existing=await models.ImageJob.findOne({recipeId:recipe.id,status:{$in:['queued','running']}}).lean();if(existing)return existing;}throw error;}
+ const queued=await models.ImageJob.countDocuments({status:{$in:activeImageStatuses}});if(queued>=positiveInt(env.IMAGE_QUEUE_LIMIT,120,250))throw new AppError(429,'The photo queue is full. Try again after a job finishes.');
+ // Claim the unique recipe slot before charging usage. Concurrent visitors share
+ // the same job, and the worker cannot claim it until reservation finishes.
+ let job;
+ try{job=await models.ImageJob.create({id:crypto.randomUUID(),recipeId:recipe.id,activeKey:recipe.id,replace,previousImage:recipe.image||'',recipeHash:recipeVisualKey(recipe),batchId,status:'preparing'});}
+ catch(error){if(error.code===11000){const existing=await models.ImageJob.findOne({recipeId:recipe.id,status:{$in:activeImageStatuses}}).lean();if(existing)return existing;}throw error;}
+ try{
+  await reserveUsage(models.Usage,'image',positiveInt(env.IMAGE_DAILY_LIMIT,5));
+  await models.ImageJob.updateOne({id:job.id,status:'preparing'},{$set:{status:'queued'}});job.status='queued';return job;
+ }catch(error){
+  await models.ImageJob.updateOne({id:job.id},{$set:{status:'failed',failureKind:error.status===429?'daily_limit':'unavailable',error:error instanceof AppError?error.message:'Could not queue this photo.',finishedAt:new Date()},$unset:{activeKey:1}});throw error;
+ }
 }
 export async function enqueuePhotoCollection(models,env){
  const batchId=crypto.randomUUID(),recipes=await models.Recipe.find().sort({id:1}).lean();let skipped=0,queued=0,existing=0,deferred=0,reason='';

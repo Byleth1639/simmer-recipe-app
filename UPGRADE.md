@@ -1,3 +1,5 @@
+> Current photo behavior is described in SIMMER-FIX-INSTRUCTIONS.md. The notes below describe earlier versions.
+
 # Upload this upgrade
 
 This package contains only changed/new code and setup instructions. Your existing `public/food` images are not included or removed. The upload is below GitHub's 100-file browser limit.

@@ -4,7 +4,8 @@ export function positiveInt(value,fallback,max=10000){const n=Number(value);retu
 export function featureStatus(env=process.env){
  const cloudImages=Boolean(env.CLOUDINARY_CLOUD_NAME&&env.CLOUDINARY_API_KEY&&env.CLOUDINARY_API_SECRET);
  const admin=Boolean(env.ADMIN_TOKEN&&env.ADMIN_TOKEN.length>=32);
- return {enhancements:Boolean(env.OPENAI_API_KEY)&&positiveInt(env.AI_DAILY_LIMIT,30)>0,cloudImages,imageGeneration:Boolean(cloudImages&&admin&&env.SD_SERVICE_URL&&env.SD_SERVICE_TOKEN?.length>=32)&&positiveInt(env.IMAGE_DAILY_LIMIT,5)>0};
+ const generator=Boolean(cloudImages&&env.SD_SERVICE_URL&&env.SD_SERVICE_TOKEN?.length>=32)&&positiveInt(env.IMAGE_DAILY_LIMIT,5)>0;
+ return {enhancements:Boolean(env.OPENAI_API_KEY)&&positiveInt(env.AI_DAILY_LIMIT,30)>0,cloudImages,imageGeneration:generator&&admin,automaticImages:generator&&env.AUTO_RECIPE_PHOTOS!=='0'};
 }
 export function requireAdmin(req,env){
  const expected=env.ADMIN_TOKEN||'';const supplied=(req.headers.authorization||'').replace(/^Bearer /,'');

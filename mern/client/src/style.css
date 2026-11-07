@@ -15,3 +15,6 @@ dialog{width:min(1120px,calc(100% - 36px));max-width:1120px;border:1px solid #e1
 @media(prefers-reduced-motion:reduce){.ingredient-spotlight{transition:none}}
 
 .ingredient-spotlight-name small,.explorer-context h4>span{text-transform:none}
+
+/* Photo status stays outside the approved ingredient explorer. */
+.recipe-photo-status{display:flex;align-items:center;gap:9px;padding:12px 30px;background:#f0f1e6;border-bottom:1px solid #dde2cf;color:#6d795b;font-size:11px;line-height:1.5}.recipe-photo-status>svg{flex-shrink:0}.recipe-photo-status>span{flex:1}.recipe-photo-status.is-generating{color:#5a7047;background:#eff4e7}.recipe-photo-status>button{margin-left:auto;border:1px solid #ced8bd;background:#fcfcf5;color:#62774c;border-radius:6px;padding:6px 9px;font-size:10px;white-space:nowrap}.detail-image>img[src$="placeholder-recipe.svg"]{object-fit:contain;padding:20px;background:#eae8db}.hero-visual{background-color:#e9e7d9}.card-image .image-button>img[src$="placeholder-recipe.svg"]{object-fit:contain;padding:20px;background:#eeecdf}@media(max-width:720px){.recipe-photo-status{padding:11px 20px;font-size:10px;gap:7px}.recipe-photo-status>button{padding:5px 7px;font-size:9px}}

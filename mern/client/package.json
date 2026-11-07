@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite --host localhost",
     "build": "vite build",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prebuild": "node ../../scripts/remove-stock-photos.mjs"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",

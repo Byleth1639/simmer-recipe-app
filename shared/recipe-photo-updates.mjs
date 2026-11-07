@@ -1,113 +1,18 @@
-// Known photo paths from the first 105-recipe release.
-// Match them explicitly so custom photo URLs are never overwritten.
-const previousImages = {
-  "banana-cinnamon-oats": "/food/oats.jpg",
-  "apple-peanut-butter-oats": "/food/oats.jpg",
-  "berry-yogurt-parfait": "/food/yogurt.jpg",
-  "mango-coconut-yogurt": "/food/yogurt.jpg",
-  "spinach-feta-scramble": "/food/eggs.jpg",
-  "mushroom-omelet": "/food/eggs.jpg",
-  "tomato-white-bean-toast": "/food/toast.jpg",
-  "peanut-banana-toast": "/food/toast.jpg",
-  "cinnamon-french-toast": "/food/toast.jpg",
-  "banana-oat-pancakes": "/food/pancakes.jpg",
-  "blueberry-lemon-pancakes": "/food/pancakes.jpg",
-  "breakfast-bean-quesadillas": "/food/sandwich.jpg",
-  "breakfast-sweet-potato-hash": "/food/eggs.jpg",
-  "tofu-breakfast-scramble": "/food/tofu.jpg",
-  "strawberry-banana-smoothie": "/food/smoothie.jpg",
-  "green-mango-smoothie": "/food/smoothie.jpg",
-  "savory-miso-oats": "/food/oats.jpg",
-  "potato-pepper-breakfast-tacos": "/food/rice.jpg",
-  "ricotta-berry-toast": "/food/toast.jpg",
-  "corn-scallion-fritters": "/food/pancakes.jpg",
-  "chickpea-cucumber-salad": "/food/salad.jpg",
-  "greek-style-lentil-salad": "/food/salad.jpg",
-  "caprese-white-bean-salad": "/food/salad.jpg",
-  "crunchy-peanut-slaw": "/food/salad.jpg",
-  "tuna-white-bean-salad": "/food/salad.jpg",
-  "egg-salad-sandwich": "/food/sandwich.jpg",
-  "smashed-chickpea-sandwich": "/food/sandwich.jpg",
-  "hummus-veggie-wraps": "/food/sandwich.jpg",
-  "chicken-avocado-wraps": "/food/sandwich.jpg",
-  "turkey-apple-cheddar-sandwich": "/food/sandwich.jpg",
-  "tomato-cheese-toasties": "/food/sandwich.jpg",
-  "black-bean-corn-quesadillas": "/food/sandwich.jpg",
-  "tomato-lentil-soup": "/food/soup.jpg",
-  "white-bean-spinach-soup": "/food/soup.jpg",
-  "carrot-ginger-soup": "/food/soup.jpg",
-  "broccoli-potato-soup": "/food/soup.jpg",
-  "quick-chicken-noodle-soup": "/food/soup.jpg",
-  "lemon-pea-couscous": "/food/rice.jpg",
-  "roasted-vegetable-quinoa": "/food/salad.jpg",
-  "edamame-rice-bowls": "/food/rice.jpg",
-  "kimchi-tuna-rice-bowls": "/food/rice.jpg",
-  "sesame-soba-salad": "/food/noodles.jpg",
-  "peanut-noodle-lunch": "/food/noodles.jpg",
-  "mediterranean-pasta-salad": "/food/pasta.jpg",
-  "pesto-pea-pasta-salad": "/food/pasta.jpg",
-  "naan-margherita-pizzas": "/food/pizza.jpg",
-  "spinach-mushroom-flatbreads": "/food/pizza.jpg",
-  "black-bean-sweet-potato-bowls": "/food/rice.jpg",
-  "baked-potato-tuna-corn": "/food/rice.jpg",
-  "warm-lentil-halloumi-salad": "/food/salad.jpg",
-  "garlic-tomato-spaghetti": "/food/pasta.jpg",
-  "lemon-ricotta-pasta": "/food/pasta.jpg",
-  "mushroom-pea-pasta": "/food/pasta.jpg",
-  "spinach-chickpea-pasta": "/food/pasta.jpg",
-  "broccoli-cheddar-pasta": "/food/pasta.jpg",
-  "tuna-tomato-pasta": "/food/pasta.jpg",
-  "turkey-bolognese": "/food/pasta.jpg",
-  "creamy-tomato-gnocchi": "/food/pasta.jpg",
-  "roasted-pepper-pasta": "/food/pasta.jpg",
-  "zucchini-basil-pasta": "/food/pasta.jpg",
-  "vegan-kimchi-fried-rice": "/food/rice.jpg",
-  "egg-vegetable-fried-rice": "/food/rice.jpg",
-  "gochujang-tofu-bowls": "/food/tofu.jpg",
-  "soy-garlic-chicken-rice": "/food/chicken.jpg",
-  "beef-bulgogi-bowls": "/food/rice.jpg",
-  "tofu-bibimbap-bowls": "/food/tofu.jpg",
-  "tuna-kimchi-stew": "/food/soup.jpg",
-  "sesame-tofu-noodles": "/food/noodles.jpg",
-  "cabbage-egg-noodles": "/food/noodles.jpg",
-  "teriyaki-salmon-rice": "/food/salmon.jpg",
-  "red-lentil-dal": "/food/curry.jpg",
-  "chickpea-spinach-curry": "/food/curry.jpg",
-  "coconut-vegetable-curry": "/food/curry.jpg",
-  "peanut-sweet-potato-stew": "/food/curry.jpg",
-  "black-bean-chili": "/food/curry.jpg",
-  "chickpea-tomato-skillet": "/food/curry.jpg",
-  "mushroom-white-bean-skillet": "/food/soup.jpg",
-  "baked-feta-chickpeas": "/food/curry.jpg",
-  "cauliflower-chickpea-tray": "/food/rice.jpg",
-  "tofu-broccoli-tray": "/food/tofu.jpg",
-  "lemon-chicken-potatoes": "/food/chicken.jpg",
-  "sheet-pan-chicken-fajitas": "/food/chicken.jpg",
-  "honey-mustard-chicken": "/food/chicken.jpg",
-  "chicken-broccoli-stir-fry": "/food/chicken.jpg",
-  "coconut-chicken-curry": "/food/curry.jpg",
-  "turkey-meatballs-tomato": "/food/pasta.jpg",
-  "beef-taco-skillet": "/food/rice.jpg",
-  "turkey-spinach-burgers": "/food/burger.jpg",
-  "ginger-pork-stir-fry": "/food/rice.jpg",
-  "sausage-pepper-skillet": "/food/chicken.jpg",
-  "lemon-salmon-potatoes": "/food/salmon.jpg",
-  "garlic-shrimp-pasta": "/food/pasta.jpg",
-  "lime-fish-tacos": "/food/salmon.jpg",
-  "coconut-cod-curry": "/food/curry.jpg",
-  "shrimp-vegetable-rice": "/food/rice.jpg",
-  "lentil-shepherds-pie": "/food/curry.jpg",
-  "black-bean-stuffed-peppers": "/food/rice.jpg",
-  "sausage-gnocchi-tray": "/food/pasta.jpg",
-  "black-bean-burgers": "/food/burger.jpg",
-  "mushroom-bean-stroganoff": "/food/noodles.jpg"
-};
-
-/** Build repeatable image-only MongoDB updates; recipe text and user data are untouched. */
-export function recipePhotoUpdates(recipes) {
- return recipes.filter(r=>previousImages[r.id]&&r.imageSource).map(r=>({updateOne:{
-  filter:{id:r.id,image:{$in:[previousImages[r.id],r.image]}},
-  update:{$set:{image:r.image,imageCredit:r.imageCredit,imageSource:r.imageSource,imageLicense:r.imageLicense,imageLicenseUrl:r.imageLicenseUrl}},
-  upsert:false
+import {retiredStockPhotos,retiredStockPaths} from './retired-stock-photos.mjs';
+const sources=new Map(retiredStockPhotos.filter(r=>r.source).map(r=>[r.id,r.source]));
+const paths=new Set(retiredStockPaths);
+export function isRetiredStockPhoto(recipe){
+ if(recipe.imageGenerated)return false;
+ return paths.has(recipe.image)||Boolean(sources.get(recipe.id)&&recipe.imageSource===sources.get(recipe.id));
+}
+export function withoutStockPhoto(recipe){
+ return isRetiredStockPhoto(recipe)?{...recipe,image:'',imageCredit:'',imageSource:'',imageLicense:'',imageLicenseUrl:'',imageGenerated:false}:recipe;
+}
+// Remove only known stock references. Generated and custom-uploaded photos stay saved.
+export function recipePhotoUpdates(recipes){
+ const ids=new Set(recipes.map(r=>r.id));
+ return retiredStockPhotos.filter(r=>ids.has(r.id)).map(r=>({updateOne:{
+  filter:{id:r.id,imageGenerated:{$ne:true},$or:[{image:{$in:retiredStockPaths}},...(r.source?[{imageSource:r.source}]:[])]},
+  update:{$set:{image:'',imageCredit:'',imageSource:'',imageLicense:'',imageLicenseUrl:''},$unset:{imageProvider:1,imagePublicId:1,imageRecipeHash:1,imageSeed:1,imageModel:1}},upsert:false
  }}));
 }

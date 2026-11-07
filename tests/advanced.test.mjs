@@ -22,7 +22,7 @@ function fixture(overrides={}){
 const post=(agent,url,body)=>agent.post(url).set('Origin',ORIGIN).send(body);
 before(async()=>{mongo=await MongoMemoryServer.create({instance:{args:['--nounixsocket','--setParameter','diagnosticDataCollectionEnabled=false']}});await mongoose.connect(mongo.getUri());await Promise.all(Object.values(models).map(m=>m.init()));await models.Recipe.insertMany(recipes);},{timeout:180000});
 after(async()=>{await mongoose.disconnect();await mongo?.stop();});
-beforeEach(async()=>{await Promise.all([models.Favorite.deleteMany({}),models.Shopping.deleteMany({}),models.Enhancement.deleteMany({}),models.ImageJob.deleteMany({}),models.Usage.deleteMany({})]);await models.Recipe.updateOne({id:recipes[0].id},{$set:{...recipes[0],imageGenerated:false,imageProvider:''}});});
+beforeEach(async()=>{await Promise.all([models.Favorite.deleteMany({}),models.Shopping.deleteMany({}),models.Enhancement.deleteMany({}),models.ImageJob.deleteMany({}),models.Usage.deleteMany({})]);await models.Recipe.bulkWrite(recipes.map(r=>({updateOne:{filter:{id:r.id},update:{$set:{...r,imageGenerated:false,imageProvider:'',imageCredit:r.imageCredit||''},$unset:{imageRecipeHash:1,imageSeed:1,imageModel:1,imagePublicId:1}}}})));});
 test('MERN API preserves visitor isolation, origin checks and shopping amounts',async()=>{
  const {app}=fixture(),a=request.agent(app),b=request.agent(app);let r=await a.get('/api/kitchen');assert.equal(r.body.recipes.length,105);
  r=await a.post('/api/kitchen').send({action:'favorite',recipeId:'pesto-pasta',saved:true});assert.equal(r.status,403);
@@ -42,6 +42,7 @@ test('AI input validation and persistent daily limits are enforced',async()=>{
  assert.equal((await post(agent,'/api/recipes/pesto-pasta/enhance',{goal:'Quicker',diet:'Vegan',servings:2})).status,429);assert.equal(calls.ai,1);
 });
 test('photo generation needs owner authentication and explicit replacement',async()=>{
+ await models.Recipe.updateOne({id:'pesto-pasta'},{$set:{image:'https://example.test/current-photo.jpg'}});
  const {app,calls}=fixture();assert.equal((await post(request(app),'/api/media/jobs',{recipeId:'pesto-pasta',replace:true})).status,401);
  assert.equal((await post(request(app),'/api/media/jobs',{recipeId:'pesto-pasta',replace:false}).set('Authorization','Bearer '+TOKEN)).status,409);assert.equal(calls.images,0);
 });

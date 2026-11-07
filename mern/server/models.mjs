@@ -7,7 +7,7 @@ export const Favorite=model('Favorite',favoriteSchema);
 export const Shopping=model('Shopping',new Schema({id:{type:String,required:true,unique:true},visitor:{type:String,required:true},name:String,unit:String,amount:Number,checked:{type:Number,default:0}},{versionKey:false}));
 const enhancementSchema=new Schema({key:{type:String,required:true,unique:true},recipeId:String,result:Schema.Types.Mixed,expiresAt:Date},{versionKey:false});enhancementSchema.index({expiresAt:1},{expireAfterSeconds:0});
 export const Enhancement=model('Enhancement',enhancementSchema);
-const imageJobSchema=new Schema({id:{type:String,required:true,unique:true},recipeId:String,activeKey:String,batchId:String,recipeHash:String,status:{type:String,enum:['queued','running','completed','failed'],default:'queued'},replace:Boolean,previousImage:String,error:String,image:String,createdAt:{type:Date,default:Date.now},startedAt:Date,finishedAt:Date},{versionKey:false});
+const imageJobSchema=new Schema({id:{type:String,required:true,unique:true},recipeId:String,activeKey:String,batchId:String,recipeHash:String,status:{type:String,enum:['preparing','queued','running','completed','failed'],default:'queued'},replace:Boolean,previousImage:String,error:String,failureKind:String,image:String,createdAt:{type:Date,default:Date.now},startedAt:Date,finishedAt:Date},{versionKey:false});
 imageJobSchema.index({activeKey:1},{unique:true,partialFilterExpression:{activeKey:{$type:'string'}}});
 imageJobSchema.index({batchId:1});
 export const ImageJob=model('ImageJob',imageJobSchema);

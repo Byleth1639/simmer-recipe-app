@@ -1,4 +1,4 @@
-// 100 additional original example recipes. Photos are illustrative; see CREDITS.md.
+// Original recipes. Photos are generated on demand and saved in cloud storage.
 export const additionalRecipes = [
   {
     "id": "banana-cinnamon-oats",
@@ -12,22 +12,22 @@ export const additionalRecipes = [
     "diet": [
       "Vegetarian"
     ],
-    "image": "/food/oats.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "rolled oats",
-        "amount": 80.0,
+        "amount": 80,
         "unit": "g"
       },
       {
         "name": "milk",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "ml"
       },
       {
         "name": "banana",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
@@ -37,12 +37,12 @@ export const additionalRecipes = [
       },
       {
         "name": "walnuts",
-        "amount": 20.0,
+        "amount": 20,
         "unit": "g"
       },
       {
         "name": "maple syrup",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       }
     ],
@@ -52,7 +52,11 @@ export const additionalRecipes = [
       "Mash half the banana and stir it into the oats with the cinnamon. Slice the remaining banana.",
       "Divide between two bowls. Top with banana slices, chopped walnuts and the maple syrup."
     ],
-    "tip": "Use ripe bananas for sweetness and add the syrup to taste."
+    "tip": "Use ripe bananas for sweetness and add the syrup to taste.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "apple-peanut-butter-oats",
@@ -68,27 +72,27 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/oats.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "rolled oats",
-        "amount": 80.0,
+        "amount": 80,
         "unit": "g"
       },
       {
         "name": "unsweetened oat milk",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "ml"
       },
       {
         "name": "apple",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "peanut butter",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tbsp"
       },
       {
@@ -98,7 +102,7 @@ export const additionalRecipes = [
       },
       {
         "name": "raisins",
-        "amount": 20.0,
+        "amount": 20,
         "unit": "g"
       }
     ],
@@ -108,7 +112,11 @@ export const additionalRecipes = [
       "Cook gently for 5–7 minutes, stirring, until the oats are tender. Stir in the peanut butter.",
       "Spoon into two bowls and scatter the remaining apple over the top."
     ],
-    "tip": "Cut the apple small so it softens while the oats cook."
+    "tip": "Cut the apple small so it softens while the oats cook.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "berry-yogurt-parfait",
@@ -122,32 +130,32 @@ export const additionalRecipes = [
     "diet": [
       "Vegetarian"
     ],
-    "image": "/food/yogurt.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "plain Greek yogurt",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "mixed berries",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
         "name": "granola",
-        "amount": 60.0,
+        "amount": 60,
         "unit": "g"
       },
       {
         "name": "honey",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tsp"
       },
       {
         "name": "pumpkin seeds",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       }
     ],
@@ -157,7 +165,11 @@ export const additionalRecipes = [
       "Repeat with the remaining yogurt, berries and granola, then drizzle with the honey.",
       "Sprinkle over the pumpkin seeds and serve immediately so the granola stays crisp."
     ],
-    "tip": "Keep the granola separate until serving if preparing the fruit and yogurt ahead."
+    "tip": "Keep the granola separate until serving if preparing the fruit and yogurt ahead.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "mango-coconut-yogurt",
@@ -174,17 +186,17 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/yogurt.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "plain coconut yogurt",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "mango",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
@@ -194,17 +206,17 @@ export const additionalRecipes = [
       },
       {
         "name": "unsweetened coconut flakes",
-        "amount": 20.0,
+        "amount": 20,
         "unit": "g"
       },
       {
         "name": "chia seeds",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "maple syrup",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       }
     ],
@@ -214,7 +226,11 @@ export const additionalRecipes = [
       "Divide the yogurt between two bowls. Add the mango and squeeze over the lime.",
       "Scatter with the toasted coconut and chia seeds, then finish with maple syrup."
     ],
-    "tip": "Let toasted coconut cool before adding it to the yogurt."
+    "tip": "Let toasted coconut cool before adding it to the yogurt.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "spinach-feta-scramble",
@@ -229,32 +245,32 @@ export const additionalRecipes = [
       "Vegetarian",
       "Gluten-free"
     ],
-    "image": "/food/eggs.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "eggs",
-        "amount": 4.0,
+        "amount": 4,
         "unit": ""
       },
       {
         "name": "spinach",
-        "amount": 80.0,
+        "amount": 80,
         "unit": "g"
       },
       {
         "name": "feta",
-        "amount": 50.0,
+        "amount": 50,
         "unit": "g"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "cherry tomatoes",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
@@ -269,7 +285,11 @@ export const additionalRecipes = [
       "Lower the heat, pour in the eggs and gently push them around the pan with a spatula.",
       "Fold in the feta and cook until the eggs are firm with no liquid remaining. Divide between two plates."
     ],
-    "tip": "Lower heat gives you more control over the texture of the eggs."
+    "tip": "Lower heat gives you more control over the texture of the eggs.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "mushroom-omelet",
@@ -284,32 +304,32 @@ export const additionalRecipes = [
       "Vegetarian",
       "Gluten-free"
     ],
-    "image": "/food/eggs.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "eggs",
-        "amount": 4.0,
+        "amount": 4,
         "unit": ""
       },
       {
         "name": "mushrooms",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
         "name": "cheddar",
-        "amount": 50.0,
+        "amount": 50,
         "unit": "g"
       },
       {
         "name": "butter",
-        "amount": 15.0,
+        "amount": 15,
         "unit": "g"
       },
       {
         "name": "chives",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
@@ -324,7 +344,11 @@ export const additionalRecipes = [
       "Add half the remaining butter and half the eggs. Cook over medium-low heat, lifting the edges to let uncooked egg reach the pan.",
       "When the egg is set, add half the mushrooms and cheese, fold and cook until the egg is firm throughout. Repeat with the remaining ingredients and finish with chives."
     ],
-    "tip": "Cook the mushrooms first so they do not release water into the omelet."
+    "tip": "Cook the mushrooms first so they do not release water into the omelet.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "tomato-white-bean-toast",
@@ -340,32 +364,32 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/toast.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "canned white beans, drained",
-        "amount": 240.0,
+        "amount": 240,
         "unit": "g"
       },
       {
         "name": "cherry tomatoes",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "bread",
-        "amount": 4.0,
+        "amount": 4,
         "unit": "slices"
       },
       {
         "name": "garlic",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "cloves"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
@@ -385,7 +409,11 @@ export const additionalRecipes = [
       "Cook for 5 minutes, add the beans and 50 ml water, then simmer for 3–4 minutes until the beans are hot. Mash a few to thicken the sauce.",
       "Toast the bread. Spoon the beans and tomatoes over it and finish with a squeeze of lemon."
     ],
-    "tip": "Keep the toast and beans separate until the last minute."
+    "tip": "Keep the toast and beans separate until the last minute.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "peanut-banana-toast",
@@ -401,22 +429,22 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/toast.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "bread",
-        "amount": 4.0,
+        "amount": 4,
         "unit": "slices"
       },
       {
         "name": "peanut butter",
-        "amount": 3.0,
+        "amount": 3,
         "unit": "tbsp"
       },
       {
         "name": "banana",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       },
       {
@@ -426,7 +454,7 @@ export const additionalRecipes = [
       },
       {
         "name": "chia seeds",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       }
     ],
@@ -436,7 +464,11 @@ export const additionalRecipes = [
       "Spread the peanut butter evenly over the warm toast and arrange the banana on top.",
       "Sprinkle with cinnamon and chia seeds. Serve while the toast is crisp."
     ],
-    "tip": "A slightly firm banana is easiest to slice neatly."
+    "tip": "A slightly firm banana is easiest to slice neatly.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "cinnamon-french-toast",
@@ -450,22 +482,22 @@ export const additionalRecipes = [
     "diet": [
       "Vegetarian"
     ],
-    "image": "/food/toast.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "bread",
-        "amount": 4.0,
+        "amount": 4,
         "unit": "slices"
       },
       {
         "name": "eggs",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       },
       {
         "name": "milk",
-        "amount": 120.0,
+        "amount": 120,
         "unit": "ml"
       },
       {
@@ -475,17 +507,17 @@ export const additionalRecipes = [
       },
       {
         "name": "butter",
-        "amount": 15.0,
+        "amount": 15,
         "unit": "g"
       },
       {
         "name": "mixed berries",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
         "name": "maple syrup",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tbsp"
       }
     ],
@@ -495,7 +527,11 @@ export const additionalRecipes = [
       "Melt half the butter in a nonstick skillet over medium-low heat. Cook two slices for 3–4 minutes per side until golden and the egg mixture is cooked through. Repeat with the remaining butter and bread.",
       "Divide between two plates and serve with washed berries and maple syrup."
     ],
-    "tip": "Slightly stale bread holds together better than very soft fresh slices."
+    "tip": "Slightly stale bread holds together better than very soft fresh slices.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "banana-oat-pancakes",
@@ -509,42 +545,42 @@ export const additionalRecipes = [
     "diet": [
       "Vegetarian"
     ],
-    "image": "/food/pancakes.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "rolled oats",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
         "name": "banana",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "eggs",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       },
       {
         "name": "milk",
-        "amount": 80.0,
+        "amount": 80,
         "unit": "ml"
       },
       {
         "name": "baking powder",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "neutral oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "plain yogurt",
-        "amount": 80.0,
+        "amount": 80,
         "unit": "g"
       }
     ],
@@ -554,7 +590,11 @@ export const additionalRecipes = [
       "Brush the skillet with a little oil. Add small spoonfuls of batter and cook for 2–3 minutes per side, until golden and set through the center. Repeat with the remaining batter and oil.",
       "Divide the pancakes between two plates and serve with the yogurt."
     ],
-    "tip": "Keep these pancakes small so they are easy to flip."
+    "tip": "Keep these pancakes small so they are easy to flip.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "blueberry-lemon-pancakes",
@@ -568,27 +608,27 @@ export const additionalRecipes = [
     "diet": [
       "Vegetarian"
     ],
-    "image": "/food/pancakes.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "all-purpose flour",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
         "name": "milk",
-        "amount": 180.0,
+        "amount": 180,
         "unit": "ml"
       },
       {
         "name": "eggs",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "blueberries",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
@@ -598,17 +638,17 @@ export const additionalRecipes = [
       },
       {
         "name": "baking powder",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "butter",
-        "amount": 15.0,
+        "amount": 15,
         "unit": "g"
       },
       {
         "name": "maple syrup",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tbsp"
       }
     ],
@@ -618,7 +658,11 @@ export const additionalRecipes = [
       "Melt a little butter in a nonstick skillet over medium-low heat. Cook small ladles of batter for 2–3 minutes per side until golden and cooked through, using the remaining butter for later batches.",
       "Serve the pancakes with maple syrup and a small squeeze of lemon."
     ],
-    "tip": "Fold gently after adding the berries to keep the batter from turning purple."
+    "tip": "Fold gently after adding the berries to keep the batter from turning purple.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "breakfast-bean-quesadillas",
@@ -632,37 +676,37 @@ export const additionalRecipes = [
     "diet": [
       "Vegetarian"
     ],
-    "image": "/food/sandwich.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "flour tortillas",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       },
       {
         "name": "eggs",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       },
       {
         "name": "canned black beans, drained",
-        "amount": 120.0,
+        "amount": 120,
         "unit": "g"
       },
       {
         "name": "cheddar",
-        "amount": 50.0,
+        "amount": 50,
         "unit": "g"
       },
       {
         "name": "salsa",
-        "amount": 3.0,
+        "amount": 3,
         "unit": "tbsp"
       },
       {
         "name": "neutral oil",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tsp"
       }
     ],
@@ -672,7 +716,11 @@ export const additionalRecipes = [
       "Lay the tortillas flat. Divide the beans, eggs, cheese and salsa over one half of each tortilla, then fold closed.",
       "Heat the remaining oil in the skillet. Cook the quesadillas for 2–3 minutes per side until crisp outside and hot through the middle. Cut into wedges."
     ],
-    "tip": "Use a thick salsa so the tortillas stay crisp."
+    "tip": "Use a thick salsa so the tortillas stay crisp.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "breakfast-sweet-potato-hash",
@@ -687,17 +735,17 @@ export const additionalRecipes = [
       "Vegetarian",
       "Gluten-free"
     ],
-    "image": "/food/eggs.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "sweet potato",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "bell pepper",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
@@ -707,12 +755,12 @@ export const additionalRecipes = [
       },
       {
         "name": "eggs",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
@@ -722,7 +770,7 @@ export const additionalRecipes = [
       },
       {
         "name": "water",
-        "amount": 60.0,
+        "amount": 60,
         "unit": "ml"
       }
     ],
@@ -732,7 +780,11 @@ export const additionalRecipes = [
       "Add the water, cover and cook over medium-low heat for 8–10 minutes, stirring occasionally. Remove the lid and cook until the potatoes are tender and the pan is mostly dry.",
       "Make two wells, crack an egg into each, cover again and cook until the whites and yolks are firm."
     ],
-    "tip": "Small, even cubes help the sweet potato cook without burning."
+    "tip": "Small, even cubes help the sweet potato cook without burning.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "tofu-breakfast-scramble",
@@ -749,27 +801,27 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/tofu.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "firm tofu",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "bell pepper",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "spinach",
-        "amount": 80.0,
+        "amount": 80,
         "unit": "g"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
@@ -794,7 +846,11 @@ export const additionalRecipes = [
       "Add the tofu, turmeric and cumin. Cook for 5–6 minutes, stirring gently, until hot throughout.",
       "Fold in the spinach until wilted and finish with lemon juice. Divide between two plates."
     ],
-    "tip": "Do not mash the tofu too finely; a few larger pieces give it a better texture."
+    "tip": "Do not mash the tofu too finely; a few larger pieces give it a better texture.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "strawberry-banana-smoothie",
@@ -809,32 +865,32 @@ export const additionalRecipes = [
       "Vegetarian",
       "Gluten-free"
     ],
-    "image": "/food/smoothie.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "frozen strawberries",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "banana",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "plain Greek yogurt",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
         "name": "milk",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "ml"
       },
       {
         "name": "peanut butter",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       }
     ],
@@ -844,7 +900,11 @@ export const additionalRecipes = [
       "Add the banana and frozen strawberries. Blend until smooth, stopping to scrape the sides if needed.",
       "Add a splash of water if too thick, blend once more and pour into two glasses."
     ],
-    "tip": "Liquid goes into the blender first to help the blades move freely."
+    "tip": "Liquid goes into the blender first to help the blades move freely.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "green-mango-smoothie",
@@ -861,27 +921,27 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/smoothie.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "frozen mango",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "banana",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "spinach",
-        "amount": 40.0,
+        "amount": 40,
         "unit": "g"
       },
       {
         "name": "unsweetened soy milk",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "ml"
       },
       {
@@ -896,7 +956,11 @@ export const additionalRecipes = [
       "Add the mango, banana and lime juice. Blend until smooth and creamy.",
       "Thin with a little cold water if needed and pour into two glasses."
     ],
-    "tip": "Blend the greens with the liquid first for a smoother drink."
+    "tip": "Blend the greens with the liquid first for a smoother drink.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "savory-miso-oats",
@@ -912,42 +976,42 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/oats.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "rolled oats",
-        "amount": 80.0,
+        "amount": 80,
         "unit": "g"
       },
       {
         "name": "mushrooms",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
         "name": "white miso",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "water",
-        "amount": 450.0,
+        "amount": 450,
         "unit": "ml"
       },
       {
         "name": "sesame oil",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tsp"
       },
       {
         "name": "scallions",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       },
       {
         "name": "sesame seeds",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       }
     ],
@@ -957,7 +1021,11 @@ export const additionalRecipes = [
       "Turn off the heat. Mix the miso with a spoonful of the hot cooking liquid, then stir it back into the oats.",
       "Divide between bowls and top with scallions, sesame seeds and the remaining sesame oil."
     ],
-    "tip": "Stir miso in after cooking so its flavor stays gentle."
+    "tip": "Stir miso in after cooking so its flavor stays gentle.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "potato-pepper-breakfast-tacos",
@@ -974,37 +1042,37 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/rice.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "potatoes",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "bell pepper",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "corn tortillas",
-        "amount": 4.0,
+        "amount": 4,
         "unit": ""
       },
       {
         "name": "avocado",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "salsa",
-        "amount": 3.0,
+        "amount": 3,
         "unit": "tbsp"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
@@ -1019,7 +1087,11 @@ export const additionalRecipes = [
       "Warm the corn tortillas in a dry skillet. Slice the avocado.",
       "Fill the tortillas with the potato mixture, avocado and salsa. Serve immediately."
     ],
-    "tip": "Let the drained potatoes steam dry before frying for crisp edges."
+    "tip": "Let the drained potatoes steam dry before frying for crisp edges.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "ricotta-berry-toast",
@@ -1033,22 +1105,22 @@ export const additionalRecipes = [
     "diet": [
       "Vegetarian"
     ],
-    "image": "/food/toast.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "bread",
-        "amount": 4.0,
+        "amount": 4,
         "unit": "slices"
       },
       {
         "name": "ricotta",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
         "name": "mixed berries",
-        "amount": 120.0,
+        "amount": 120,
         "unit": "g"
       },
       {
@@ -1058,7 +1130,7 @@ export const additionalRecipes = [
       },
       {
         "name": "honey",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tsp"
       }
     ],
@@ -1068,7 +1140,11 @@ export const additionalRecipes = [
       "Wash and dry the berries. Slice larger berries into smaller pieces.",
       "Spread the ricotta over the toast, add the berries and drizzle with honey."
     ],
-    "tip": "Grate just the yellow part of the lemon peel; the white pith tastes bitter."
+    "tip": "Grate just the yellow part of the lemon peel; the white pith tastes bitter.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "corn-scallion-fritters",
@@ -1082,42 +1158,42 @@ export const additionalRecipes = [
     "diet": [
       "Vegetarian"
     ],
-    "image": "/food/pancakes.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "canned sweetcorn, drained",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "all-purpose flour",
-        "amount": 80.0,
+        "amount": 80,
         "unit": "g"
       },
       {
         "name": "eggs",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "milk",
-        "amount": 60.0,
+        "amount": 60,
         "unit": "ml"
       },
       {
         "name": "scallions",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       },
       {
         "name": "neutral oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "plain yogurt",
-        "amount": 80.0,
+        "amount": 80,
         "unit": "g"
       },
       {
@@ -1132,7 +1208,11 @@ export const additionalRecipes = [
       "Cook for 3–4 minutes per side until golden and the batter is cooked through. Repeat with the remaining batter and oil.",
       "Mix the yogurt with lime juice and serve alongside the hot fritters."
     ],
-    "tip": "Keep the fritters small and leave space between them when cooking."
+    "tip": "Keep the fritters small and leave space between them when cooking.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "chickpea-cucumber-salad",
@@ -1149,22 +1229,22 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/salad.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "canned chickpeas, drained",
-        "amount": 240.0,
+        "amount": 240,
         "unit": "g"
       },
       {
         "name": "cucumber",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "cherry tomatoes",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
@@ -1174,17 +1254,17 @@ export const additionalRecipes = [
       },
       {
         "name": "lemon",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "olive oil",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tbsp"
       },
       {
         "name": "parsley",
-        "amount": 10.0,
+        "amount": 10,
         "unit": "g"
       }
     ],
@@ -1194,7 +1274,11 @@ export const additionalRecipes = [
       "Add the chickpeas and vegetables and toss until everything is coated.",
       "Let stand for 5 minutes, then stir in the parsley and divide between bowls."
     ],
-    "tip": "Dice the cucumber into small pieces so every bite has a little of everything."
+    "tip": "Dice the cucumber into small pieces so every bite has a little of everything.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "greek-style-lentil-salad",
@@ -1209,12 +1293,12 @@ export const additionalRecipes = [
       "Vegetarian",
       "Gluten-free"
     ],
-    "image": "/food/salad.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "cooked lentils",
-        "amount": 250.0,
+        "amount": 250,
         "unit": "g"
       },
       {
@@ -1224,17 +1308,17 @@ export const additionalRecipes = [
       },
       {
         "name": "cherry tomatoes",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
         "name": "feta",
-        "amount": 60.0,
+        "amount": 60,
         "unit": "g"
       },
       {
         "name": "pitted olives",
-        "amount": 40.0,
+        "amount": 40,
         "unit": "g"
       },
       {
@@ -1244,7 +1328,7 @@ export const additionalRecipes = [
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
@@ -1259,7 +1343,11 @@ export const additionalRecipes = [
       "Add the lentils, cucumber, tomatoes and olives. Toss gently.",
       "Crumble the feta over the salad and serve, or refrigerate promptly until lunch."
     ],
-    "tip": "Add feta last so it stays in soft little pieces."
+    "tip": "Add feta last so it stays in soft little pieces.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "caprese-white-bean-salad",
@@ -1274,37 +1362,37 @@ export const additionalRecipes = [
       "Vegetarian",
       "Gluten-free"
     ],
-    "image": "/food/salad.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "canned white beans, drained",
-        "amount": 240.0,
+        "amount": 240,
         "unit": "g"
       },
       {
         "name": "cherry tomatoes",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "mozzarella",
-        "amount": 125.0,
+        "amount": 125,
         "unit": "g"
       },
       {
         "name": "fresh basil",
-        "amount": 10.0,
+        "amount": 10,
         "unit": "g"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "balsamic vinegar",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       }
     ],
@@ -1314,7 +1402,11 @@ export const additionalRecipes = [
       "Toss the beans and tomatoes in the dressing, then gently fold in the mozzarella.",
       "Tear the basil over the salad just before serving."
     ],
-    "tip": "Let refrigerated tomatoes lose their chill briefly before serving for better flavor."
+    "tip": "Let refrigerated tomatoes lose their chill briefly before serving for better flavor.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "crunchy-peanut-slaw",
@@ -1330,47 +1422,47 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/salad.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "cabbage",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "carrot",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "frozen shelled edamame",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
         "name": "peanut butter",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tbsp"
       },
       {
         "name": "soy sauce",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "lime",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "maple syrup",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "peanuts",
-        "amount": 20.0,
+        "amount": 20,
         "unit": "g"
       }
     ],
@@ -1380,7 +1472,11 @@ export const additionalRecipes = [
       "Whisk the peanut butter, soy sauce, lime juice, maple syrup and 2–3 tbsp water into a pourable dressing.",
       "Toss the vegetables and edamame with the dressing and top with chopped peanuts."
     ],
-    "tip": "Add water to the dressing a spoonful at a time until it coats rather than clumps."
+    "tip": "Add water to the dressing a spoonful at a time until it coats rather than clumps.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "tuna-white-bean-salad",
@@ -1395,22 +1491,22 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/salad.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "canned tuna, drained",
-        "amount": 160.0,
+        "amount": 160,
         "unit": "g"
       },
       {
         "name": "canned white beans, drained",
-        "amount": 240.0,
+        "amount": 240,
         "unit": "g"
       },
       {
         "name": "celery",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "stalks"
       },
       {
@@ -1425,12 +1521,12 @@ export const additionalRecipes = [
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "parsley",
-        "amount": 10.0,
+        "amount": 10,
         "unit": "g"
       }
     ],
@@ -1440,7 +1536,11 @@ export const additionalRecipes = [
       "Add the beans and vegetables. Flake in the tuna and fold everything together gently.",
       "Taste, season with a little pepper and serve. Refrigerate any leftovers promptly."
     ],
-    "tip": "Choose tuna packed in water or drain oil-packed tuna well."
+    "tip": "Choose tuna packed in water or drain oil-packed tuna well.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "egg-salad-sandwich",
@@ -1455,27 +1555,27 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/sandwich.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "eggs",
-        "amount": 4.0,
+        "amount": 4,
         "unit": ""
       },
       {
         "name": "bread",
-        "amount": 4.0,
+        "amount": 4,
         "unit": "slices"
       },
       {
         "name": "mayonnaise",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tbsp"
       },
       {
         "name": "Dijon mustard",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
@@ -1485,12 +1585,12 @@ export const additionalRecipes = [
       },
       {
         "name": "chives",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "lettuce",
-        "amount": 40.0,
+        "amount": 40,
         "unit": "g"
       }
     ],
@@ -1500,7 +1600,11 @@ export const additionalRecipes = [
       "Mix the eggs with the mayonnaise, mustard, chopped chives and a small squeeze of lemon.",
       "Layer the lettuce and egg salad between the bread slices. Cut each sandwich in half and serve."
     ],
-    "tip": "Cool the eggs before mixing so the filling stays creamy."
+    "tip": "Cool the eggs before mixing so the filling stays creamy.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "smashed-chickpea-sandwich",
@@ -1516,22 +1620,22 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/sandwich.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "canned chickpeas, drained",
-        "amount": 240.0,
+        "amount": 240,
         "unit": "g"
       },
       {
         "name": "bread",
-        "amount": 4.0,
+        "amount": 4,
         "unit": "slices"
       },
       {
         "name": "tahini",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
@@ -1541,7 +1645,7 @@ export const additionalRecipes = [
       },
       {
         "name": "celery",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "stalks"
       },
       {
@@ -1551,7 +1655,7 @@ export const additionalRecipes = [
       },
       {
         "name": "lettuce",
-        "amount": 40.0,
+        "amount": 40,
         "unit": "g"
       }
     ],
@@ -1561,7 +1665,11 @@ export const additionalRecipes = [
       "Thinly slice the cucumber and wash and dry the lettuce.",
       "Spread the chickpea filling over two bread slices, add the cucumber and lettuce, and close with the remaining slices."
     ],
-    "tip": "Leave some chickpeas whole for a more interesting texture."
+    "tip": "Leave some chickpeas whole for a more interesting texture.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "hummus-veggie-wraps",
@@ -1577,22 +1685,22 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/sandwich.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "flour tortillas",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       },
       {
         "name": "hummus",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
         "name": "carrot",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
@@ -1607,7 +1715,7 @@ export const additionalRecipes = [
       },
       {
         "name": "spinach",
-        "amount": 40.0,
+        "amount": 40,
         "unit": "g"
       },
       {
@@ -1622,7 +1730,11 @@ export const additionalRecipes = [
       "Spread the hummus down the middle of each tortilla, leaving a border. Add the vegetables and a squeeze of lemon.",
       "Fold the sides inward and roll tightly from the bottom. Slice in half to serve."
     ],
-    "tip": "Dry the vegetables well so the wraps do not become soggy."
+    "tip": "Dry the vegetables well so the wraps do not become soggy.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "chicken-avocado-wraps",
@@ -1636,32 +1748,32 @@ export const additionalRecipes = [
     "diet": [
       "Dairy-free"
     ],
-    "image": "/food/sandwich.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "cooked chicken breast",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "flour tortillas",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       },
       {
         "name": "avocado",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "lettuce",
-        "amount": 50.0,
+        "amount": 50,
         "unit": "g"
       },
       {
         "name": "tomato",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
@@ -1671,12 +1783,12 @@ export const additionalRecipes = [
       },
       {
         "name": "Dijon mustard",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       }
     ],
@@ -1686,7 +1798,11 @@ export const additionalRecipes = [
       "Whisk the lime juice, mustard and olive oil. Toss with the chicken.",
       "Warm the tortillas briefly, fill with the chicken and vegetables, then fold in the sides and roll. Serve immediately or refrigerate promptly."
     ],
-    "tip": "Keep the filling centered and avoid overfilling so the wraps close neatly."
+    "tip": "Keep the filling centered and avoid overfilling so the wraps close neatly.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "turkey-apple-cheddar-sandwich",
@@ -1698,37 +1814,37 @@ export const additionalRecipes = [
     "minutes": 15,
     "servings": 2,
     "diet": [],
-    "image": "/food/sandwich.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "ready-to-eat sliced turkey",
-        "amount": 160.0,
+        "amount": 160,
         "unit": "g"
       },
       {
         "name": "bread",
-        "amount": 4.0,
+        "amount": 4,
         "unit": "slices"
       },
       {
         "name": "cheddar",
-        "amount": 50.0,
+        "amount": 50,
         "unit": "g"
       },
       {
         "name": "apple",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "Dijon mustard",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tsp"
       },
       {
         "name": "lettuce",
-        "amount": 40.0,
+        "amount": 40,
         "unit": "g"
       }
     ],
@@ -1738,7 +1854,11 @@ export const additionalRecipes = [
       "Spread the mustard over the bread. Divide the turkey, cheddar, apple and lettuce between two slices.",
       "Close the sandwiches with the remaining bread, cut in half and serve."
     ],
-    "tip": "Use a crisp apple such as Granny Smith for a tart contrast to the cheese."
+    "tip": "Use a crisp apple such as Granny Smith for a tart contrast to the cheese.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "tomato-cheese-toasties",
@@ -1752,32 +1872,32 @@ export const additionalRecipes = [
     "diet": [
       "Vegetarian"
     ],
-    "image": "/food/sandwich.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "bread",
-        "amount": 4.0,
+        "amount": 4,
         "unit": "slices"
       },
       {
         "name": "cheddar",
-        "amount": 80.0,
+        "amount": 80,
         "unit": "g"
       },
       {
         "name": "tomato",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "butter",
-        "amount": 15.0,
+        "amount": 15,
         "unit": "g"
       },
       {
         "name": "Dijon mustard",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
@@ -1792,7 +1912,11 @@ export const additionalRecipes = [
       "Fill two sandwiches with cheddar, tomato and oregano. Place in a skillet over medium-low heat.",
       "Cook for 3–4 minutes per side, pressing gently, until the bread is golden and the cheese has melted."
     ],
-    "tip": "Moderate heat lets the cheese melt before the bread gets too dark."
+    "tip": "Moderate heat lets the cheese melt before the bread gets too dark.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "black-bean-corn-quesadillas",
@@ -1806,27 +1930,27 @@ export const additionalRecipes = [
     "diet": [
       "Vegetarian"
     ],
-    "image": "/food/sandwich.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "flour tortillas",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       },
       {
         "name": "canned black beans, drained",
-        "amount": 180.0,
+        "amount": 180,
         "unit": "g"
       },
       {
         "name": "canned sweetcorn, drained",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
         "name": "cheddar",
-        "amount": 70.0,
+        "amount": 70,
         "unit": "g"
       },
       {
@@ -1836,12 +1960,12 @@ export const additionalRecipes = [
       },
       {
         "name": "salsa",
-        "amount": 3.0,
+        "amount": 3,
         "unit": "tbsp"
       },
       {
         "name": "neutral oil",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tsp"
       }
     ],
@@ -1851,7 +1975,11 @@ export const additionalRecipes = [
       "Spread the filling over half of each tortilla, scatter with cheese and fold closed.",
       "Heat the oil in a skillet over medium heat. Cook for 3–4 minutes per side until crisp, melted and hot through the middle."
     ],
-    "tip": "A little mashed bean helps hold the filling together when you flip."
+    "tip": "A little mashed bean helps hold the filling together when you flip.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "tomato-lentil-soup",
@@ -1868,47 +1996,47 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/soup.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "dried red lentils",
-        "amount": 120.0,
+        "amount": 120,
         "unit": "g"
       },
       {
         "name": "canned chopped tomatoes",
-        "amount": 400.0,
+        "amount": 400,
         "unit": "g"
       },
       {
         "name": "onion",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "carrot",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "garlic",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "cloves"
       },
       {
         "name": "gluten-free vegetable stock",
-        "amount": 600.0,
+        "amount": 600,
         "unit": "ml"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "ground cumin",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
@@ -1923,7 +2051,11 @@ export const additionalRecipes = [
       "Add the tomatoes, lentils and stock. Bring to a boil, then simmer for 18–20 minutes until the lentils are soft, stirring occasionally.",
       "Mash lightly with a spoon for a thicker soup and finish with lemon juice."
     ],
-    "tip": "Red lentils naturally soften and thicken the soup without a blender."
+    "tip": "Red lentils naturally soften and thicken the soup without a blender.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "white-bean-spinach-soup",
@@ -1940,22 +2072,22 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/soup.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "canned white beans, drained",
-        "amount": 240.0,
+        "amount": 240,
         "unit": "g"
       },
       {
         "name": "carrot",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "celery",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "stalks"
       },
       {
@@ -1965,17 +2097,17 @@ export const additionalRecipes = [
       },
       {
         "name": "spinach",
-        "amount": 80.0,
+        "amount": 80,
         "unit": "g"
       },
       {
         "name": "gluten-free vegetable stock",
-        "amount": 600.0,
+        "amount": 600,
         "unit": "ml"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
@@ -1995,7 +2127,11 @@ export const additionalRecipes = [
       "Add the beans, rosemary and stock. Simmer for 10 minutes, then mash a few beans against the side of the pan to thicken the broth.",
       "Stir in the spinach until wilted and finish with lemon juice."
     ],
-    "tip": "Finely dice the carrot so it softens quickly in the broth."
+    "tip": "Finely dice the carrot so it softens quickly in the broth.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "carrot-ginger-soup",
@@ -2012,12 +2148,12 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/soup.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "carrots",
-        "amount": 400.0,
+        "amount": 400,
         "unit": "g"
       },
       {
@@ -2027,22 +2163,22 @@ export const additionalRecipes = [
       },
       {
         "name": "fresh ginger",
-        "amount": 15.0,
+        "amount": 15,
         "unit": "g"
       },
       {
         "name": "coconut milk",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "ml"
       },
       {
         "name": "gluten-free vegetable stock",
-        "amount": 500.0,
+        "amount": 500,
         "unit": "ml"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
@@ -2057,7 +2193,11 @@ export const additionalRecipes = [
       "Add the carrots and stock. Simmer for 15–18 minutes until the carrots are very soft.",
       "Add the coconut milk and warm through. Carefully blend with an immersion blender in the pan, then stir in lime juice."
     ],
-    "tip": "An immersion blender avoids transferring hot soup into a closed blender jug."
+    "tip": "An immersion blender avoids transferring hot soup into a closed blender jug.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "broccoli-potato-soup",
@@ -2072,17 +2212,17 @@ export const additionalRecipes = [
       "Vegetarian",
       "Gluten-free"
     ],
-    "image": "/food/soup.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "broccoli",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "potatoes",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
@@ -2092,22 +2232,22 @@ export const additionalRecipes = [
       },
       {
         "name": "milk",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "ml"
       },
       {
         "name": "cheddar",
-        "amount": 40.0,
+        "amount": 40,
         "unit": "g"
       },
       {
         "name": "gluten-free vegetable stock",
-        "amount": 500.0,
+        "amount": 500,
         "unit": "ml"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       }
     ],
@@ -2117,7 +2257,11 @@ export const additionalRecipes = [
       "Add the broccoli and cook for another 7–8 minutes until the vegetables are tender.",
       "Stir in the milk and warm gently without boiling. Blend with an immersion blender, then stir in the grated cheddar off the heat."
     ],
-    "tip": "Use the peeled broccoli stalk as well as the florets to waste less."
+    "tip": "Use the peeled broccoli stalk as well as the florets to waste less.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "quick-chicken-noodle-soup",
@@ -2131,27 +2275,27 @@ export const additionalRecipes = [
     "diet": [
       "Dairy-free"
     ],
-    "image": "/food/soup.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "cooked chicken breast",
-        "amount": 180.0,
+        "amount": 180,
         "unit": "g"
       },
       {
         "name": "dried egg noodles",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
         "name": "carrot",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "celery",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "stalks"
       },
       {
@@ -2161,17 +2305,17 @@ export const additionalRecipes = [
       },
       {
         "name": "chicken stock",
-        "amount": 700.0,
+        "amount": 700,
         "unit": "ml"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "parsley",
-        "amount": 10.0,
+        "amount": 10,
         "unit": "g"
       }
     ],
@@ -2181,7 +2325,11 @@ export const additionalRecipes = [
       "Add the stock and bring to a simmer. Stir in the noodles and cook according to their packet, usually 5–7 minutes.",
       "Add the chicken and simmer until it reaches 74°C / 165°F throughout. Finish with chopped parsley and serve hot."
     ],
-    "tip": "Cook only the noodles you need now; they absorb broth as they sit."
+    "tip": "Cook only the noodles you need now; they absorb broth as they sit.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "lemon-pea-couscous",
@@ -2195,42 +2343,42 @@ export const additionalRecipes = [
     "diet": [
       "Vegetarian"
     ],
-    "image": "/food/rice.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "couscous",
-        "amount": 120.0,
+        "amount": 120,
         "unit": "g"
       },
       {
         "name": "frozen peas",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
         "name": "feta",
-        "amount": 60.0,
+        "amount": 60,
         "unit": "g"
       },
       {
         "name": "lemon",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "fresh mint",
-        "amount": 10.0,
+        "amount": 10,
         "unit": "g"
       },
       {
         "name": "vegetable stock",
-        "amount": 160.0,
+        "amount": 160,
         "unit": "ml"
       }
     ],
@@ -2240,7 +2388,11 @@ export const additionalRecipes = [
       "Fluff the couscous with a fork and mix in the peas, olive oil, lemon zest and juice.",
       "Crumble in the feta, add the chopped mint and divide between bowls."
     ],
-    "tip": "Check the couscous packet for the exact liquid ratio, as brands vary."
+    "tip": "Check the couscous packet for the exact liquid ratio, as brands vary.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "roasted-vegetable-quinoa",
@@ -2257,37 +2409,37 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/salad.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "dry quinoa",
-        "amount": 120.0,
+        "amount": 120,
         "unit": "g"
       },
       {
         "name": "zucchini",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "bell pepper",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "canned chickpeas, drained",
-        "amount": 120.0,
+        "amount": 120,
         "unit": "g"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "tahini",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tbsp"
       },
       {
@@ -2297,7 +2449,7 @@ export const additionalRecipes = [
       },
       {
         "name": "water",
-        "amount": 240.0,
+        "amount": 240,
         "unit": "ml"
       }
     ],
@@ -2307,7 +2459,11 @@ export const additionalRecipes = [
       "Meanwhile, rinse the quinoa. Bring it and the measured water to a boil, cover and simmer gently for about 15 minutes, or follow its packet. Rest for 5 minutes.",
       "Mix the tahini and lemon juice with 2–3 tbsp water. Divide the quinoa and roasted vegetables between bowls and drizzle with the dressing."
     ],
-    "tip": "Spread the vegetables in one layer so they roast rather than steam."
+    "tip": "Spread the vegetables in one layer so they roast rather than steam.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "edamame-rice-bowls",
@@ -2323,17 +2479,17 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/rice.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "frozen shelled edamame",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
@@ -2343,27 +2499,27 @@ export const additionalRecipes = [
       },
       {
         "name": "carrot",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "soy sauce",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "rice vinegar",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "sesame oil",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tsp"
       },
       {
         "name": "sesame seeds",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       }
     ],
@@ -2373,7 +2529,11 @@ export const additionalRecipes = [
       "Whisk the soy sauce, rice vinegar and sesame oil.",
       "Divide the rice between bowls, add the edamame and vegetables, then drizzle with the dressing and sesame seeds."
     ],
-    "tip": "Keep chilled cooked rice refrigerated until you are ready to heat it."
+    "tip": "Keep chilled cooked rice refrigerated until you are ready to heat it.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "kimchi-tuna-rice-bowls",
@@ -2387,22 +2547,22 @@ export const additionalRecipes = [
     "diet": [
       "Dairy-free"
     ],
-    "image": "/food/rice.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "canned tuna, drained",
-        "amount": 160.0,
+        "amount": 160,
         "unit": "g"
       },
       {
         "name": "kimchi",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
@@ -2412,22 +2572,22 @@ export const additionalRecipes = [
       },
       {
         "name": "sesame oil",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tsp"
       },
       {
         "name": "soy sauce",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "roasted seaweed",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "sheets"
       },
       {
         "name": "scallions",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       }
     ],
@@ -2437,7 +2597,11 @@ export const additionalRecipes = [
       "Flake the tuna and mix it with the sesame oil and soy sauce.",
       "Divide the rice between bowls. Add the tuna, kimchi and cucumber, then crumble the seaweed over the top and scatter with scallion."
     ],
-    "tip": "Kimchi varies in heat and may contain fish or shellfish; check the label."
+    "tip": "Kimchi varies in heat and may contain fish or shellfish; check the label.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "sesame-soba-salad",
@@ -2453,17 +2617,17 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/noodles.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "dried soba noodles",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
         "name": "frozen shelled edamame",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
@@ -2473,27 +2637,27 @@ export const additionalRecipes = [
       },
       {
         "name": "carrot",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "soy sauce",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "rice vinegar",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "sesame oil",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tsp"
       },
       {
         "name": "sesame seeds",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       }
     ],
@@ -2503,7 +2667,11 @@ export const additionalRecipes = [
       "Cut the cucumber into thin strips and grate the carrot. Whisk the soy sauce, vinegar and sesame oil.",
       "Toss the noodles, edamame and vegetables with the dressing. Divide between bowls and sprinkle with sesame seeds."
     ],
-    "tip": "Most soba contains wheat as well as buckwheat, so it is not automatically gluten-free."
+    "tip": "Most soba contains wheat as well as buckwheat, so it is not automatically gluten-free.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "peanut-noodle-lunch",
@@ -2519,17 +2687,17 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/noodles.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "dried wheat noodles",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
         "name": "carrot",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
@@ -2539,27 +2707,27 @@ export const additionalRecipes = [
       },
       {
         "name": "peanut butter",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tbsp"
       },
       {
         "name": "soy sauce",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "lime",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "maple syrup",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "scallions",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       }
     ],
@@ -2569,7 +2737,11 @@ export const additionalRecipes = [
       "Whisk the peanut butter, soy sauce, lime juice and maple syrup with enough reserved water to make a smooth sauce.",
       "Toss the warm noodles with the sauce and vegetables. Serve with the scallions on top."
     ],
-    "tip": "The sauce thickens as it cools; loosen it with a little more water if needed."
+    "tip": "The sauce thickens as it cools; loosen it with a little more water if needed.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "mediterranean-pasta-salad",
@@ -2583,17 +2755,17 @@ export const additionalRecipes = [
     "diet": [
       "Vegetarian"
     ],
-    "image": "/food/pasta.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "dried pasta",
-        "amount": 160.0,
+        "amount": 160,
         "unit": "g"
       },
       {
         "name": "cherry tomatoes",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
@@ -2603,17 +2775,17 @@ export const additionalRecipes = [
       },
       {
         "name": "feta",
-        "amount": 60.0,
+        "amount": 60,
         "unit": "g"
       },
       {
         "name": "pitted olives",
-        "amount": 30.0,
+        "amount": 30,
         "unit": "g"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
@@ -2633,7 +2805,11 @@ export const additionalRecipes = [
       "Whisk the olive oil, lemon juice and oregano. Toss with the pasta and vegetables.",
       "Crumble over the feta and fold gently. Serve immediately or refrigerate promptly."
     ],
-    "tip": "Use short pasta shapes that hold little pockets of dressing."
+    "tip": "Use short pasta shapes that hold little pockets of dressing.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "pesto-pea-pasta-salad",
@@ -2647,32 +2823,32 @@ export const additionalRecipes = [
     "diet": [
       "Vegetarian"
     ],
-    "image": "/food/pasta.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "dried pasta",
-        "amount": 160.0,
+        "amount": 160,
         "unit": "g"
       },
       {
         "name": "frozen peas",
-        "amount": 120.0,
+        "amount": 120,
         "unit": "g"
       },
       {
         "name": "vegetarian basil pesto",
-        "amount": 40.0,
+        "amount": 40,
         "unit": "g"
       },
       {
         "name": "cherry tomatoes",
-        "amount": 120.0,
+        "amount": 120,
         "unit": "g"
       },
       {
         "name": "mozzarella",
-        "amount": 80.0,
+        "amount": 80,
         "unit": "g"
       },
       {
@@ -2687,7 +2863,11 @@ export const additionalRecipes = [
       "Halve the tomatoes and tear the mozzarella into small pieces.",
       "Toss the pasta and peas with the pesto, lemon juice and a spoonful of the reserved water. Fold in the tomatoes and mozzarella."
     ],
-    "tip": "Choose pesto made with vegetarian cheese when cooking for vegetarians."
+    "tip": "Choose pesto made with vegetarian cheese when cooking for vegetarians.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "naan-margherita-pizzas",
@@ -2701,32 +2881,32 @@ export const additionalRecipes = [
     "diet": [
       "Vegetarian"
     ],
-    "image": "/food/pizza.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "naan breads",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       },
       {
         "name": "passata",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
         "name": "mozzarella",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
         "name": "cherry tomatoes",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
@@ -2736,7 +2916,7 @@ export const additionalRecipes = [
       },
       {
         "name": "fresh basil",
-        "amount": 5.0,
+        "amount": 5,
         "unit": "g"
       }
     ],
@@ -2746,7 +2926,11 @@ export const additionalRecipes = [
       "Tear over the mozzarella, add the halved tomatoes and drizzle with olive oil.",
       "Bake for 10–12 minutes until the cheese bubbles and the edges are crisp. Tear over basil and serve."
     ],
-    "tip": "Pat the mozzarella dry first to keep the base from becoming soggy."
+    "tip": "Pat the mozzarella dry first to keep the base from becoming soggy.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "spinach-mushroom-flatbreads",
@@ -2760,42 +2944,42 @@ export const additionalRecipes = [
     "diet": [
       "Vegetarian"
     ],
-    "image": "/food/pizza.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "flatbreads",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       },
       {
         "name": "mushrooms",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
         "name": "spinach",
-        "amount": 80.0,
+        "amount": 80,
         "unit": "g"
       },
       {
         "name": "mozzarella",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
         "name": "garlic",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "cloves"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "plain Greek yogurt",
-        "amount": 3.0,
+        "amount": 3,
         "unit": "tbsp"
       }
     ],
@@ -2805,7 +2989,11 @@ export const additionalRecipes = [
       "Spread the yogurt over the flatbreads on a baking tray. Top with the vegetables and torn mozzarella.",
       "Bake for 8–10 minutes until the edges are crisp and the cheese is melted."
     ],
-    "tip": "Cook off the mushroom liquid before putting the topping on the bread."
+    "tip": "Cook off the mushroom liquid before putting the topping on the bread.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "black-bean-sweet-potato-bowls",
@@ -2822,47 +3010,47 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/rice.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "sweet potato",
-        "amount": 350.0,
+        "amount": 350,
         "unit": "g"
       },
       {
         "name": "canned black beans, drained",
-        "amount": 240.0,
+        "amount": 240,
         "unit": "g"
       },
       {
         "name": "canned sweetcorn, drained",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
         "name": "avocado",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "lime",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "ground cumin",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "salsa",
-        "amount": 3.0,
+        "amount": 3,
         "unit": "tbsp"
       }
     ],
@@ -2872,7 +3060,11 @@ export const additionalRecipes = [
       "Rinse the beans and warm in a saucepan with the corn, remaining cumin and 3 tbsp water. Simmer until hot.",
       "Divide the sweet potato, beans and corn between bowls. Add sliced avocado, salsa and lime juice."
     ],
-    "tip": "Cut the sweet potato evenly so all the pieces finish roasting together."
+    "tip": "Cut the sweet potato evenly so all the pieces finish roasting together.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "baked-potato-tuna-corn",
@@ -2886,32 +3078,32 @@ export const additionalRecipes = [
     "diet": [
       "Gluten-free"
     ],
-    "image": "/food/rice.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "large potatoes",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       },
       {
         "name": "canned tuna, drained",
-        "amount": 160.0,
+        "amount": 160,
         "unit": "g"
       },
       {
         "name": "canned sweetcorn, drained",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
         "name": "plain Greek yogurt",
-        "amount": 60.0,
+        "amount": 60,
         "unit": "g"
       },
       {
         "name": "cheddar",
-        "amount": 30.0,
+        "amount": 30,
         "unit": "g"
       },
       {
@@ -2921,7 +3113,7 @@ export const additionalRecipes = [
       },
       {
         "name": "chives",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       }
     ],
@@ -2931,7 +3123,11 @@ export const additionalRecipes = [
       "Let the potatoes stand for 2 minutes, then split them carefully to release the steam. Fluff the insides with a fork.",
       "Divide the tuna filling between the potatoes and top with grated cheddar."
     ],
-    "tip": "Microwave the potatoes a minute at a time near the end to avoid overcooking."
+    "tip": "Microwave the potatoes a minute at a time near the end to avoid overcooking.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "warm-lentil-halloumi-salad",
@@ -2946,27 +3142,27 @@ export const additionalRecipes = [
       "Vegetarian",
       "Gluten-free"
     ],
-    "image": "/food/salad.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "cooked lentils",
-        "amount": 250.0,
+        "amount": 250,
         "unit": "g"
       },
       {
         "name": "halloumi",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
         "name": "spinach",
-        "amount": 60.0,
+        "amount": 60,
         "unit": "g"
       },
       {
         "name": "cherry tomatoes",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
@@ -2976,7 +3172,7 @@ export const additionalRecipes = [
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
@@ -2991,7 +3187,11 @@ export const additionalRecipes = [
       "Slice the halloumi and pat it dry. Heat the remaining oil in a nonstick skillet and cook the cheese for 1–2 minutes per side until golden.",
       "Fold the warm lentils into the vegetables, then top with the halloumi and serve immediately."
     ],
-    "tip": "Halloumi is best eaten straight from the pan while it is warm."
+    "tip": "Halloumi is best eaten straight from the pan while it is warm.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "garlic-tomato-spaghetti",
@@ -3007,32 +3207,32 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/pasta.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "spaghetti",
-        "amount": 180.0,
+        "amount": 180,
         "unit": "g"
       },
       {
         "name": "canned chopped tomatoes",
-        "amount": 400.0,
+        "amount": 400,
         "unit": "g"
       },
       {
         "name": "garlic",
-        "amount": 3.0,
+        "amount": 3,
         "unit": "cloves"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "fresh basil",
-        "amount": 10.0,
+        "amount": 10,
         "unit": "g"
       },
       {
@@ -3047,7 +3247,11 @@ export const additionalRecipes = [
       "Add the tomatoes and simmer for 12–15 minutes. Meanwhile, cook the spaghetti according to its packet and reserve a cup of pasta water.",
       "Drain the spaghetti and toss with the sauce, adding a splash of pasta water to loosen. Tear over basil and serve."
     ],
-    "tip": "A little starchy pasta water helps the sauce cling to the spaghetti."
+    "tip": "A little starchy pasta water helps the sauce cling to the spaghetti.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "lemon-ricotta-pasta",
@@ -3061,37 +3265,37 @@ export const additionalRecipes = [
     "diet": [
       "Vegetarian"
     ],
-    "image": "/food/pasta.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "dried pasta",
-        "amount": 180.0,
+        "amount": 180,
         "unit": "g"
       },
       {
         "name": "ricotta",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
         "name": "spinach",
-        "amount": 80.0,
+        "amount": 80,
         "unit": "g"
       },
       {
         "name": "lemon",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "vegetarian hard cheese",
-        "amount": 20.0,
+        "amount": 20,
         "unit": "g"
       },
       {
@@ -3106,7 +3310,11 @@ export const additionalRecipes = [
       "Reserve a cup of pasta water, then drain the pasta and spinach.",
       "Toss with the ricotta mixture off the heat, adding pasta water a spoonful at a time until creamy. Finish with grated vegetarian hard cheese."
     ],
-    "tip": "Mix the sauce off the heat to keep the ricotta smooth."
+    "tip": "Mix the sauce off the heat to keep the ricotta smooth.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "mushroom-pea-pasta",
@@ -3120,42 +3328,42 @@ export const additionalRecipes = [
     "diet": [
       "Vegetarian"
     ],
-    "image": "/food/pasta.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "dried pasta",
-        "amount": 180.0,
+        "amount": 180,
         "unit": "g"
       },
       {
         "name": "mushrooms",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "frozen peas",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
         "name": "garlic",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "cloves"
       },
       {
         "name": "cream",
-        "amount": 80.0,
+        "amount": 80,
         "unit": "ml"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "vegetarian hard cheese",
-        "amount": 20.0,
+        "amount": 20,
         "unit": "g"
       }
     ],
@@ -3165,7 +3373,11 @@ export const additionalRecipes = [
       "Stir in the cream and simmer gently for 2 minutes. Reserve a cup of pasta water and drain the pasta and peas.",
       "Toss the pasta and peas in the sauce, loosening with pasta water as needed. Add the grated cheese off the heat."
     ],
-    "tip": "Give the mushrooms space in the pan so they brown instead of steaming."
+    "tip": "Give the mushrooms space in the pan so they brown instead of steaming.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "spinach-chickpea-pasta",
@@ -3181,37 +3393,37 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/pasta.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "dried pasta",
-        "amount": 160.0,
+        "amount": 160,
         "unit": "g"
       },
       {
         "name": "canned chickpeas, drained",
-        "amount": 240.0,
+        "amount": 240,
         "unit": "g"
       },
       {
         "name": "canned chopped tomatoes",
-        "amount": 400.0,
+        "amount": 400,
         "unit": "g"
       },
       {
         "name": "spinach",
-        "amount": 80.0,
+        "amount": 80,
         "unit": "g"
       },
       {
         "name": "garlic",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "cloves"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
@@ -3226,7 +3438,11 @@ export const additionalRecipes = [
       "Add the chickpeas and simmer for 10–12 minutes. Stir in the spinach until wilted.",
       "Reserve a little pasta water before draining. Toss the pasta with the sauce and add water as needed to loosen."
     ],
-    "tip": "Mash a few chickpeas into the tomatoes for a thicker sauce."
+    "tip": "Mash a few chickpeas into the tomatoes for a thicker sauce.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "broccoli-cheddar-pasta",
@@ -3240,42 +3456,42 @@ export const additionalRecipes = [
     "diet": [
       "Vegetarian"
     ],
-    "image": "/food/pasta.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "dried pasta",
-        "amount": 180.0,
+        "amount": 180,
         "unit": "g"
       },
       {
         "name": "broccoli",
-        "amount": 250.0,
+        "amount": 250,
         "unit": "g"
       },
       {
         "name": "cheddar",
-        "amount": 80.0,
+        "amount": 80,
         "unit": "g"
       },
       {
         "name": "milk",
-        "amount": 250.0,
+        "amount": 250,
         "unit": "ml"
       },
       {
         "name": "butter",
-        "amount": 15.0,
+        "amount": 15,
         "unit": "g"
       },
       {
         "name": "all-purpose flour",
-        "amount": 15.0,
+        "amount": 15,
         "unit": "g"
       },
       {
         "name": "Dijon mustard",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       }
     ],
@@ -3285,7 +3501,11 @@ export const additionalRecipes = [
       "Whisk in the milk gradually. Simmer gently for 3–4 minutes until thickened, then turn off the heat and stir in the grated cheddar and mustard.",
       "Drain the pasta and broccoli, reserving a little cooking water. Fold into the sauce and loosen with water if needed."
     ],
-    "tip": "Take the sauce off the heat before adding cheese to help prevent graininess."
+    "tip": "Take the sauce off the heat before adding cheese to help prevent graininess.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "tuna-tomato-pasta",
@@ -3299,37 +3519,37 @@ export const additionalRecipes = [
     "diet": [
       "Dairy-free"
     ],
-    "image": "/food/pasta.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "dried pasta",
-        "amount": 180.0,
+        "amount": 180,
         "unit": "g"
       },
       {
         "name": "canned tuna, drained",
-        "amount": 160.0,
+        "amount": 160,
         "unit": "g"
       },
       {
         "name": "canned chopped tomatoes",
-        "amount": 400.0,
+        "amount": 400,
         "unit": "g"
       },
       {
         "name": "pitted olives",
-        "amount": 30.0,
+        "amount": 30,
         "unit": "g"
       },
       {
         "name": "garlic",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "cloves"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
@@ -3344,7 +3564,11 @@ export const additionalRecipes = [
       "Simmer for 10–12 minutes. Flake in the tuna and warm through for 2 minutes.",
       "Reserve some pasta water before draining. Toss the pasta with the sauce and add a splash of water if needed."
     ],
-    "tip": "Fold the tuna in gently at the end to keep a few larger flakes."
+    "tip": "Fold the tuna in gently at the end to keep a few larger flakes.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "turkey-bolognese",
@@ -3358,27 +3582,27 @@ export const additionalRecipes = [
     "diet": [
       "Dairy-free"
     ],
-    "image": "/food/pasta.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "spaghetti",
-        "amount": 180.0,
+        "amount": 180,
         "unit": "g"
       },
       {
         "name": "ground turkey",
-        "amount": 250.0,
+        "amount": 250,
         "unit": "g"
       },
       {
         "name": "canned chopped tomatoes",
-        "amount": 400.0,
+        "amount": 400,
         "unit": "g"
       },
       {
         "name": "carrot",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
@@ -3388,17 +3612,17 @@ export const additionalRecipes = [
       },
       {
         "name": "garlic",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "cloves"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "dried oregano",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       }
     ],
@@ -3408,7 +3632,11 @@ export const additionalRecipes = [
       "Add the tomatoes and 100 ml water. Simmer for 15 minutes, stirring occasionally, until the turkey reaches 74°C / 165°F.",
       "Meanwhile, cook the spaghetti according to its packet. Drain and toss with the sauce."
     ],
-    "tip": "Grating the carrot helps it soften quickly and blend into the sauce."
+    "tip": "Grating the carrot helps it soften quickly and blend into the sauce.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "creamy-tomato-gnocchi",
@@ -3422,42 +3650,42 @@ export const additionalRecipes = [
     "diet": [
       "Vegetarian"
     ],
-    "image": "/food/pasta.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "potato gnocchi",
-        "amount": 400.0,
+        "amount": 400,
         "unit": "g"
       },
       {
         "name": "passata",
-        "amount": 250.0,
+        "amount": 250,
         "unit": "g"
       },
       {
         "name": "spinach",
-        "amount": 80.0,
+        "amount": 80,
         "unit": "g"
       },
       {
         "name": "cream",
-        "amount": 60.0,
+        "amount": 60,
         "unit": "ml"
       },
       {
         "name": "garlic",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "cloves"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "vegetarian hard cheese",
-        "amount": 20.0,
+        "amount": 20,
         "unit": "g"
       }
     ],
@@ -3467,7 +3695,11 @@ export const additionalRecipes = [
       "Cook the gnocchi in a separate pan according to the packet and drain.",
       "Fold the gnocchi into the sauce, warm through and finish with grated vegetarian hard cheese."
     ],
-    "tip": "Gnocchi cooks quickly, so prepare the sauce before boiling it."
+    "tip": "Gnocchi cooks quickly, so prepare the sauce before boiling it.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "roasted-pepper-pasta",
@@ -3483,42 +3715,42 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/pasta.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "dried pasta",
-        "amount": 180.0,
+        "amount": 180,
         "unit": "g"
       },
       {
         "name": "jarred roasted red peppers, drained",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "passata",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
         "name": "canned white beans, drained",
-        "amount": 120.0,
+        "amount": 120,
         "unit": "g"
       },
       {
         "name": "garlic",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "cloves"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "fresh basil",
-        "amount": 10.0,
+        "amount": 10,
         "unit": "g"
       }
     ],
@@ -3528,7 +3760,11 @@ export const additionalRecipes = [
       "Heat the oil in a skillet, pour in the sauce and simmer gently for 7–8 minutes, stirring occasionally.",
       "Toss the pasta in the sauce, adding pasta water as needed. Tear over the basil and serve."
     ],
-    "tip": "Drain jarred peppers well so the sauce keeps a rich flavor."
+    "tip": "Drain jarred peppers well so the sauce keeps a rich flavor.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "zucchini-basil-pasta",
@@ -3542,22 +3778,22 @@ export const additionalRecipes = [
     "diet": [
       "Vegetarian"
     ],
-    "image": "/food/pasta.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "dried pasta",
-        "amount": 180.0,
+        "amount": 180,
         "unit": "g"
       },
       {
         "name": "zucchini",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       },
       {
         "name": "garlic",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "cloves"
       },
       {
@@ -3567,17 +3803,17 @@ export const additionalRecipes = [
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "fresh basil",
-        "amount": 10.0,
+        "amount": 10,
         "unit": "g"
       },
       {
         "name": "vegetarian hard cheese",
-        "amount": 30.0,
+        "amount": 30,
         "unit": "g"
       }
     ],
@@ -3587,7 +3823,11 @@ export const additionalRecipes = [
       "Add the garlic and cook for 1 minute. Reserve a cup of pasta water and drain the pasta.",
       "Toss the pasta with the zucchini, lemon juice, torn basil and grated cheese, adding pasta water until glossy."
     ],
-    "tip": "Thin zucchini slices cook quickly and fold neatly around the pasta."
+    "tip": "Thin zucchini slices cook quickly and fold neatly around the pasta.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "vegan-kimchi-fried-rice",
@@ -3603,47 +3843,47 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/rice.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "vegan kimchi",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
         "name": "firm tofu",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "gochujang",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "soy sauce",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "neutral oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "sesame oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "scallions",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       }
     ],
@@ -3653,7 +3893,11 @@ export const additionalRecipes = [
       "Add the kimchi and cook for 2 minutes. Stir in the rice, gochujang and soy sauce, breaking up any clumps.",
       "Stir-fry until the rice reaches 74°C / 165°F throughout. Turn off the heat and add the sesame oil and scallions."
     ],
-    "tip": "Use kimchi labeled vegan; many traditional versions contain fish sauce or shrimp."
+    "tip": "Use kimchi labeled vegan; many traditional versions contain fish sauce or shrimp.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "egg-vegetable-fried-rice",
@@ -3668,42 +3912,42 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/rice.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "eggs",
-        "amount": 3.0,
+        "amount": 3,
         "unit": ""
       },
       {
         "name": "frozen mixed vegetables",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "soy sauce",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "neutral oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "sesame oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "scallions",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       }
     ],
@@ -3713,7 +3957,11 @@ export const additionalRecipes = [
       "Add the remaining neutral oil and frozen vegetables. Stir-fry for 4–5 minutes until tender and hot, then add the rice and soy sauce.",
       "Stir-fry until the rice reaches 74°C / 165°F throughout. Return the eggs to the pan and finish with sesame oil and scallions."
     ],
-    "tip": "Break up the rice before adding it so it heats evenly."
+    "tip": "Break up the rice before adding it so it heats evenly.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "gochujang-tofu-bowls",
@@ -3729,17 +3977,17 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/tofu.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "firm tofu",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
@@ -3749,32 +3997,32 @@ export const additionalRecipes = [
       },
       {
         "name": "carrot",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "gochujang",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "soy sauce",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "maple syrup",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "neutral oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "rice vinegar",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       }
     ],
@@ -3784,7 +4032,11 @@ export const additionalRecipes = [
       "Heat the oil in a skillet and fry the tofu for 8–10 minutes, turning until golden. Add the sauce and simmer for 2 minutes until glossy.",
       "Heat the rice according to its packet until steaming hot. Divide between bowls and add the tofu, cucumber and carrot."
     ],
-    "tip": "Drying the tofu well gives the glaze a better surface to cling to."
+    "tip": "Drying the tofu well gives the glaze a better surface to cling to.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "soy-garlic-chicken-rice",
@@ -3798,47 +4050,47 @@ export const additionalRecipes = [
     "diet": [
       "Dairy-free"
     ],
-    "image": "/food/chicken.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "chicken breast",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "broccoli",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "garlic",
-        "amount": 3.0,
+        "amount": 3,
         "unit": "cloves"
       },
       {
         "name": "soy sauce",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tbsp"
       },
       {
         "name": "honey",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "rice vinegar",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "neutral oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       }
     ],
@@ -3848,7 +4100,11 @@ export const additionalRecipes = [
       "Heat the oil in a skillet and cook the chicken for 6–8 minutes, turning. Add the sauce and simmer for 3–4 minutes until the chicken reaches 74°C / 165°F.",
       "Heat the rice according to its packet until steaming hot. Serve with the chicken, sauce and broccoli."
     ],
-    "tip": "Keep the sauce moving near the end so the honey does not burn."
+    "tip": "Keep the sauce moving near the end so the honey does not burn.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "beef-bulgogi-bowls",
@@ -3862,17 +4118,17 @@ export const additionalRecipes = [
     "diet": [
       "Dairy-free"
     ],
-    "image": "/food/rice.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "thinly sliced beef steak",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
@@ -3882,7 +4138,7 @@ export const additionalRecipes = [
       },
       {
         "name": "carrot",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
@@ -3892,27 +4148,27 @@ export const additionalRecipes = [
       },
       {
         "name": "soy sauce",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tbsp"
       },
       {
         "name": "garlic",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "cloves"
       },
       {
         "name": "fresh ginger",
-        "amount": 10.0,
+        "amount": 10,
         "unit": "g"
       },
       {
         "name": "sesame oil",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tsp"
       },
       {
         "name": "neutral oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       }
     ],
@@ -3922,7 +4178,11 @@ export const additionalRecipes = [
       "Heat the neutral oil in a wide skillet. Cook the onion and carrot for 3 minutes, then add the beef and marinade. Cook, turning, until the beef reaches 63°C / 145°F; remove from the heat and rest for 3 minutes.",
       "Heat the rice according to its packet until steaming hot and serve with the beef and vegetables."
     ],
-    "tip": "Ask for thinly sliced beef so it cooks quickly and evenly."
+    "tip": "Ask for thinly sliced beef so it cooks quickly and evenly.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "tofu-bibimbap-bowls",
@@ -3938,57 +4198,57 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/tofu.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "firm tofu",
-        "amount": 250.0,
+        "amount": 250,
         "unit": "g"
       },
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "mushrooms",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
         "name": "spinach",
-        "amount": 80.0,
+        "amount": 80,
         "unit": "g"
       },
       {
         "name": "carrot",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "gochujang",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "soy sauce",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "sesame oil",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tsp"
       },
       {
         "name": "neutral oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "rice vinegar",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       }
     ],
@@ -3998,7 +4258,11 @@ export const additionalRecipes = [
       "Add the remaining neutral oil and cook the mushrooms and carrot for 5 minutes. Add the spinach and remaining soy sauce and cook until wilted.",
       "Heat the rice according to its packet until steaming hot. Arrange the tofu and vegetables over the rice, drizzle with sesame oil and add the gochujang sauce. Mix before eating."
     ],
-    "tip": "Cook the toppings in batches if the skillet is small so they keep their texture."
+    "tip": "Cook the toppings in batches if the skillet is small so they keep their texture.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "tuna-kimchi-stew",
@@ -4012,27 +4276,27 @@ export const additionalRecipes = [
     "diet": [
       "Dairy-free"
     ],
-    "image": "/food/soup.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "kimchi",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "canned tuna, drained",
-        "amount": 160.0,
+        "amount": 160,
         "unit": "g"
       },
       {
         "name": "firm tofu",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
@@ -4042,27 +4306,27 @@ export const additionalRecipes = [
       },
       {
         "name": "gochujang",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "soy sauce",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "water",
-        "amount": 500.0,
+        "amount": 500,
         "unit": "ml"
       },
       {
         "name": "sesame oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "scallions",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       }
     ],
@@ -4072,7 +4336,11 @@ export const additionalRecipes = [
       "Add the water, gochujang and soy sauce. Simmer for 10 minutes, then add the tofu and tuna and simmer for another 5 minutes until hot throughout.",
       "Heat the rice according to its packet until steaming hot. Finish the stew with scallions and serve alongside the rice."
     ],
-    "tip": "Taste before adding any salt, as kimchi and tuna can already be salty."
+    "tip": "Taste before adding any salt, as kimchi and tuna can already be salty.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "sesame-tofu-noodles",
@@ -4088,47 +4356,47 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/noodles.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "dried wheat noodles",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
         "name": "firm tofu",
-        "amount": 250.0,
+        "amount": 250,
         "unit": "g"
       },
       {
         "name": "broccoli",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "soy sauce",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tbsp"
       },
       {
         "name": "rice vinegar",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "sesame oil",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tsp"
       },
       {
         "name": "neutral oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "sesame seeds",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       }
     ],
@@ -4138,7 +4406,11 @@ export const additionalRecipes = [
       "Heat the neutral oil in a wide skillet. Fry the tofu for 8–10 minutes, turning until golden.",
       "Add the noodles, broccoli, soy sauce, vinegar and sesame oil. Toss with a splash of cooking water until hot and glossy, then top with sesame seeds."
     ],
-    "tip": "Pat the tofu thoroughly dry to reduce splattering in the pan."
+    "tip": "Pat the tofu thoroughly dry to reduce splattering in the pan.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "cabbage-egg-noodles",
@@ -4153,47 +4425,47 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/noodles.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "dried egg noodles",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
         "name": "cabbage",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "carrot",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "eggs",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       },
       {
         "name": "soy sauce",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tbsp"
       },
       {
         "name": "fresh ginger",
-        "amount": 10.0,
+        "amount": 10,
         "unit": "g"
       },
       {
         "name": "neutral oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "sesame oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       }
     ],
@@ -4203,7 +4475,11 @@ export const additionalRecipes = [
       "Heat the remaining neutral oil and stir-fry the cabbage and carrot for 4–5 minutes. Add the ginger for 30 seconds.",
       "Return the eggs to the pan with the noodles, soy sauce and sesame oil. Toss over the heat for 2 minutes until everything is hot."
     ],
-    "tip": "Keep the cabbage slightly crisp for a better contrast with the noodles."
+    "tip": "Keep the cabbage slightly crisp for a better contrast with the noodles.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "teriyaki-salmon-rice",
@@ -4217,47 +4493,47 @@ export const additionalRecipes = [
     "diet": [
       "Dairy-free"
     ],
-    "image": "/food/salmon.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "salmon fillets",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "broccoli",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "soy sauce",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tbsp"
       },
       {
         "name": "honey",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "rice vinegar",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "fresh ginger",
-        "amount": 10.0,
+        "amount": 10,
         "unit": "g"
       },
       {
         "name": "neutral oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       }
     ],
@@ -4267,7 +4543,11 @@ export const additionalRecipes = [
       "Simmer the sauce separately for 3–4 minutes until slightly reduced. Steam the broccoli for 5–6 minutes.",
       "Heat the rice according to its packet until steaming hot. Serve with the salmon and broccoli and spoon the cooked sauce over the top."
     ],
-    "tip": "Keep the sauce separate from raw fish so it can be used safely for serving."
+    "tip": "Keep the sauce separate from raw fish so it can be used safely for serving.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "red-lentil-dal",
@@ -4284,17 +4564,17 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/curry.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "dried red lentils",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
         "name": "canned chopped tomatoes",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
@@ -4304,17 +4584,17 @@ export const additionalRecipes = [
       },
       {
         "name": "garlic",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "cloves"
       },
       {
         "name": "fresh ginger",
-        "amount": 10.0,
+        "amount": 10,
         "unit": "g"
       },
       {
         "name": "ground cumin",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
@@ -4324,22 +4604,22 @@ export const additionalRecipes = [
       },
       {
         "name": "spinach",
-        "amount": 80.0,
+        "amount": 80,
         "unit": "g"
       },
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "neutral oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "water",
-        "amount": 500.0,
+        "amount": 500,
         "unit": "ml"
       }
     ],
@@ -4349,7 +4629,11 @@ export const additionalRecipes = [
       "Add the lentils, tomatoes and water. Simmer gently for 20–25 minutes, stirring occasionally, until the lentils are soft. Add water if needed.",
       "Fold in the spinach until wilted. Heat the rice according to its packet until steaming hot and serve with the dal."
     ],
-    "tip": "Stir more often as the lentils soften to keep them from sticking."
+    "tip": "Stir more often as the lentils soften to keep them from sticking.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "chickpea-spinach-curry",
@@ -4366,27 +4650,27 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/curry.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "canned chickpeas, drained",
-        "amount": 240.0,
+        "amount": 240,
         "unit": "g"
       },
       {
         "name": "canned chopped tomatoes",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "coconut milk",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "ml"
       },
       {
         "name": "spinach",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
@@ -4396,22 +4680,22 @@ export const additionalRecipes = [
       },
       {
         "name": "garlic",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "cloves"
       },
       {
         "name": "gluten-free curry powder",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tsp"
       },
       {
         "name": "neutral oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       }
     ],
@@ -4421,7 +4705,11 @@ export const additionalRecipes = [
       "Add the tomatoes, coconut milk and chickpeas. Simmer gently for 12–15 minutes, then stir in the spinach until wilted.",
       "Heat the rice according to its packet until steaming hot. Divide between bowls and spoon the curry over it."
     ],
-    "tip": "Taste your curry powder first; blends vary in heat."
+    "tip": "Taste your curry powder first; blends vary in heat.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "coconut-vegetable-curry",
@@ -4438,42 +4726,42 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/curry.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "sweet potato",
-        "amount": 250.0,
+        "amount": 250,
         "unit": "g"
       },
       {
         "name": "bell pepper",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "frozen peas",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
         "name": "coconut milk",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "ml"
       },
       {
         "name": "vegan gluten-free red curry paste",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "neutral oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
@@ -4483,7 +4771,7 @@ export const additionalRecipes = [
       },
       {
         "name": "water",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "ml"
       }
     ],
@@ -4493,7 +4781,11 @@ export const additionalRecipes = [
       "Add the sweet potato and simmer for 10 minutes. Add the pepper and peas and simmer for another 6–8 minutes until all the vegetables are tender.",
       "Heat the rice according to its packet until steaming hot. Finish the curry with lime juice and serve with the rice."
     ],
-    "tip": "Choose curry paste labeled vegan and gluten-free to match the recipe filters."
+    "tip": "Choose curry paste labeled vegan and gluten-free to match the recipe filters.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "peanut-sweet-potato-stew",
@@ -4510,32 +4802,32 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/curry.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "sweet potato",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "canned chickpeas, drained",
-        "amount": 240.0,
+        "amount": 240,
         "unit": "g"
       },
       {
         "name": "canned chopped tomatoes",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "peanut butter",
-        "amount": 3.0,
+        "amount": 3,
         "unit": "tbsp"
       },
       {
         "name": "spinach",
-        "amount": 80.0,
+        "amount": 80,
         "unit": "g"
       },
       {
@@ -4545,22 +4837,22 @@ export const additionalRecipes = [
       },
       {
         "name": "fresh ginger",
-        "amount": 10.0,
+        "amount": 10,
         "unit": "g"
       },
       {
         "name": "gluten-free vegetable stock",
-        "amount": 400.0,
+        "amount": 400,
         "unit": "ml"
       },
       {
         "name": "neutral oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       }
     ],
@@ -4570,7 +4862,11 @@ export const additionalRecipes = [
       "Add the sweet potato, tomatoes, chickpeas and stock. Simmer for 20–25 minutes until the potato is tender.",
       "Mix the peanut butter with a ladleful of hot broth, then stir it back into the pot. Wilt the spinach into the stew. Heat the rice according to its packet and serve alongside."
     ],
-    "tip": "Mixing peanut butter with warm broth first keeps it from forming lumps."
+    "tip": "Mixing peanut butter with warm broth first keeps it from forming lumps.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "black-bean-chili",
@@ -4587,22 +4883,22 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/curry.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "canned black beans, drained",
-        "amount": 360.0,
+        "amount": 360,
         "unit": "g"
       },
       {
         "name": "canned chopped tomatoes",
-        "amount": 400.0,
+        "amount": 400,
         "unit": "g"
       },
       {
         "name": "bell pepper",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
@@ -4612,27 +4908,27 @@ export const additionalRecipes = [
       },
       {
         "name": "canned sweetcorn, drained",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
         "name": "ground cumin",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "smoked paprika",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
@@ -4647,7 +4943,11 @@ export const additionalRecipes = [
       "Stir in the beans, tomatoes, corn and 100 ml water. Simmer for 20 minutes, stirring occasionally.",
       "Heat the rice according to its packet until steaming hot. Finish the chili with lime juice and serve over the rice."
     ],
-    "tip": "Mash a few beans into the sauce if you prefer a thicker chili."
+    "tip": "Mash a few beans into the sauce if you prefer a thicker chili.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "chickpea-tomato-skillet",
@@ -4663,22 +4963,22 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/curry.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "canned chickpeas, drained",
-        "amount": 360.0,
+        "amount": 360,
         "unit": "g"
       },
       {
         "name": "canned chopped tomatoes",
-        "amount": 400.0,
+        "amount": 400,
         "unit": "g"
       },
       {
         "name": "bell pepper",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
@@ -4688,32 +4988,32 @@ export const additionalRecipes = [
       },
       {
         "name": "garlic",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "cloves"
       },
       {
         "name": "ground cumin",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "smoked paprika",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "bread",
-        "amount": 4.0,
+        "amount": 4,
         "unit": "slices"
       },
       {
         "name": "parsley",
-        "amount": 10.0,
+        "amount": 10,
         "unit": "g"
       }
     ],
@@ -4723,7 +5023,11 @@ export const additionalRecipes = [
       "Add the tomatoes and chickpeas with 100 ml water. Simmer for 15 minutes until the sauce thickens.",
       "Toast the bread, scatter chopped parsley over the skillet and serve the bread alongside."
     ],
-    "tip": "Use a wide skillet so the tomato sauce reduces without a long simmer."
+    "tip": "Use a wide skillet so the tomato sauce reduces without a long simmer.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "mushroom-white-bean-skillet",
@@ -4739,37 +5043,37 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/soup.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "mushrooms",
-        "amount": 250.0,
+        "amount": 250,
         "unit": "g"
       },
       {
         "name": "canned white beans, drained",
-        "amount": 240.0,
+        "amount": 240,
         "unit": "g"
       },
       {
         "name": "spinach",
-        "amount": 80.0,
+        "amount": 80,
         "unit": "g"
       },
       {
         "name": "garlic",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "cloves"
       },
       {
         "name": "vegetable stock",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "ml"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
@@ -4779,7 +5083,7 @@ export const additionalRecipes = [
       },
       {
         "name": "bread",
-        "amount": 4.0,
+        "amount": 4,
         "unit": "slices"
       },
       {
@@ -4794,7 +5098,11 @@ export const additionalRecipes = [
       "Add the garlic and thyme for 30 seconds. Stir in the beans and stock and simmer for 5 minutes, mashing a few beans to thicken.",
       "Fold in the spinach until wilted and finish with lemon juice. Toast the bread and serve alongside."
     ],
-    "tip": "Do not stir the mushrooms constantly; contact with the pan helps them brown."
+    "tip": "Do not stir the mushrooms constantly; contact with the pan helps them brown.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "baked-feta-chickpeas",
@@ -4809,42 +5117,42 @@ export const additionalRecipes = [
       "Vegetarian",
       "Gluten-free"
     ],
-    "image": "/food/curry.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "canned chickpeas, drained",
-        "amount": 240.0,
+        "amount": 240,
         "unit": "g"
       },
       {
         "name": "cherry tomatoes",
-        "amount": 250.0,
+        "amount": 250,
         "unit": "g"
       },
       {
         "name": "bell pepper",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "feta",
-        "amount": 120.0,
+        "amount": 120,
         "unit": "g"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "dried oregano",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       }
     ],
@@ -4854,7 +5162,11 @@ export const additionalRecipes = [
       "Nestle the feta in the middle and bake for 25–30 minutes until the vegetables are tender and the feta is soft.",
       "Heat the rice according to its packet until steaming hot. Gently stir the warm feta through the vegetables and spoon over the rice."
     ],
-    "tip": "Choose a dish that holds the ingredients snugly so the tomatoes make a sauce."
+    "tip": "Choose a dish that holds the ingredients snugly so the tomatoes make a sauce.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "cauliflower-chickpea-tray",
@@ -4870,22 +5182,22 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/rice.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "cauliflower",
-        "amount": 400.0,
+        "amount": 400,
         "unit": "g"
       },
       {
         "name": "canned chickpeas, drained",
-        "amount": 240.0,
+        "amount": 240,
         "unit": "g"
       },
       {
         "name": "couscous",
-        "amount": 120.0,
+        "amount": 120,
         "unit": "g"
       },
       {
@@ -4895,7 +5207,7 @@ export const additionalRecipes = [
       },
       {
         "name": "ground cumin",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
@@ -4905,7 +5217,7 @@ export const additionalRecipes = [
       },
       {
         "name": "tahini",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tbsp"
       },
       {
@@ -4915,7 +5227,7 @@ export const additionalRecipes = [
       },
       {
         "name": "vegetable stock",
-        "amount": 160.0,
+        "amount": 160,
         "unit": "ml"
       }
     ],
@@ -4925,7 +5237,11 @@ export const additionalRecipes = [
       "Meanwhile, bring the stock to a boil and pour over the couscous in a heatproof bowl. Cover for the time on its packet, then fluff with a fork.",
       "Mix the tahini and lemon juice with 2–3 tbsp water. Serve the roasted vegetables over the couscous and drizzle with the dressing."
     ],
-    "tip": "Small florets roast more evenly than a mixture of large and tiny pieces."
+    "tip": "Small florets roast more evenly than a mixture of large and tiny pieces.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "tofu-broccoli-tray",
@@ -4941,52 +5257,52 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/tofu.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "firm tofu",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "broccoli",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "soy sauce",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tbsp"
       },
       {
         "name": "maple syrup",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "rice vinegar",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "neutral oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "sesame oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "sesame seeds",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       }
     ],
@@ -4996,7 +5312,11 @@ export const additionalRecipes = [
       "Mix the soy sauce, maple syrup, vinegar and sesame oil. Toss with the roasted tofu and broccoli and return to the oven for 5 minutes.",
       "Heat the rice according to its packet until steaming hot. Divide between bowls, add the tofu and broccoli and scatter with sesame seeds."
     ],
-    "tip": "Leave room between tofu cubes so they can develop golden edges."
+    "tip": "Leave room between tofu cubes so they can develop golden edges.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "lemon-chicken-potatoes",
@@ -5011,32 +5331,32 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/chicken.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "boneless chicken thighs",
-        "amount": 350.0,
+        "amount": 350,
         "unit": "g"
       },
       {
         "name": "potatoes",
-        "amount": 350.0,
+        "amount": 350,
         "unit": "g"
       },
       {
         "name": "zucchini",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "lemon",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "garlic",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "cloves"
       },
       {
@@ -5046,7 +5366,7 @@ export const additionalRecipes = [
       },
       {
         "name": "dried oregano",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       }
     ],
@@ -5056,7 +5376,11 @@ export const additionalRecipes = [
       "Add the chicken and sliced zucchini to the tray. Roast for 20–25 minutes more, turning the vegetables once, until the potatoes are tender and the chicken reaches 74°C / 165°F.",
       "Rest the chicken for 3 minutes, then divide everything between two plates and spoon over the tray juices."
     ],
-    "tip": "Start the potatoes first so they finish at the same time as the chicken."
+    "tip": "Start the potatoes first so they finish at the same time as the chicken.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "sheet-pan-chicken-fajitas",
@@ -5070,52 +5394,52 @@ export const additionalRecipes = [
     "diet": [
       "Dairy-free"
     ],
-    "image": "/food/chicken.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "chicken breast",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "bell peppers",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       },
       {
         "name": "onion",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "flour tortillas",
-        "amount": 4.0,
+        "amount": 4,
         "unit": ""
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "ground cumin",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "smoked paprika",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "lime",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "salsa",
-        "amount": 3.0,
+        "amount": 3,
         "unit": "tbsp"
       }
     ],
@@ -5125,7 +5449,11 @@ export const additionalRecipes = [
       "Roast for 18–22 minutes, turning halfway, until the chicken reaches 74°C / 165°F.",
       "Warm the tortillas in a dry skillet. Fill with the chicken and vegetables and serve with salsa and lime wedges."
     ],
-    "tip": "Use two trays if needed; crowded ingredients release steam instead of roasting."
+    "tip": "Use two trays if needed; crowded ingredients release steam instead of roasting.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "honey-mustard-chicken",
@@ -5139,47 +5467,47 @@ export const additionalRecipes = [
     "diet": [
       "Gluten-free"
     ],
-    "image": "/food/chicken.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "chicken breast",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "green beans",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "Dijon mustard",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "honey",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "plain Greek yogurt",
-        "amount": 60.0,
+        "amount": 60,
         "unit": "g"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "water",
-        "amount": 80.0,
+        "amount": 80,
         "unit": "ml"
       }
     ],
@@ -5189,7 +5517,11 @@ export const additionalRecipes = [
       "Add the mustard, honey and water. Simmer for 3–4 minutes until the chicken reaches 74°C / 165°F. Remove from the heat and stir in the yogurt.",
       "Steam the beans for 5–6 minutes and heat the rice according to its packet until steaming hot. Serve with the chicken and sauce."
     ],
-    "tip": "Stir the yogurt in off the heat to reduce the chance of the sauce splitting."
+    "tip": "Stir the yogurt in off the heat to reduce the chance of the sauce splitting.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "chicken-broccoli-stir-fry",
@@ -5203,52 +5535,52 @@ export const additionalRecipes = [
     "diet": [
       "Dairy-free"
     ],
-    "image": "/food/chicken.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "chicken breast",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "broccoli",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "soy sauce",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tbsp"
       },
       {
         "name": "garlic",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "cloves"
       },
       {
         "name": "fresh ginger",
-        "amount": 10.0,
+        "amount": 10,
         "unit": "g"
       },
       {
         "name": "cornstarch",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "neutral oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "water",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "ml"
       }
     ],
@@ -5258,7 +5590,11 @@ export const additionalRecipes = [
       "Heat the oil in a large skillet. Cook the chicken for 5–7 minutes, turning, then add the garlic and ginger for 30 seconds.",
       "Add the broccoli and sauce. Simmer, stirring, for 3–4 minutes until thickened and the chicken reaches 74°C / 165°F. Heat the rice according to its packet and serve alongside."
     ],
-    "tip": "Mix cornstarch with cold liquid before adding it to a hot pan."
+    "tip": "Mix cornstarch with cold liquid before adding it to a hot pan.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "coconut-chicken-curry",
@@ -5273,17 +5609,17 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/curry.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "chicken breast",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "bell pepper",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
@@ -5293,32 +5629,32 @@ export const additionalRecipes = [
       },
       {
         "name": "canned chopped tomatoes",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "coconut milk",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "ml"
       },
       {
         "name": "gluten-free curry powder",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tsp"
       },
       {
         "name": "garlic",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "cloves"
       },
       {
         "name": "neutral oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       }
     ],
@@ -5328,7 +5664,11 @@ export const additionalRecipes = [
       "Add the chicken and cook for 3 minutes, stirring. Add the tomatoes and coconut milk and simmer gently for 12–15 minutes until the chicken reaches 74°C / 165°F.",
       "Heat the rice according to its packet until steaming hot. Divide between bowls and add the curry."
     ],
-    "tip": "Simmer gently after adding coconut milk to keep the sauce smooth."
+    "tip": "Simmer gently after adding coconut milk to keep the sauce smooth.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "turkey-meatballs-tomato",
@@ -5342,47 +5682,47 @@ export const additionalRecipes = [
     "diet": [
       "Dairy-free"
     ],
-    "image": "/food/pasta.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "ground turkey",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "breadcrumbs",
-        "amount": 30.0,
+        "amount": 30,
         "unit": "g"
       },
       {
         "name": "eggs",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "dried oregano",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "garlic",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "cloves"
       },
       {
         "name": "passata",
-        "amount": 400.0,
+        "amount": 400,
         "unit": "g"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "spaghetti",
-        "amount": 160.0,
+        "amount": 160,
         "unit": "g"
       }
     ],
@@ -5392,7 +5732,11 @@ export const additionalRecipes = [
       "Add the remaining garlic, oregano, passata and 100 ml water. Cover and simmer for 15–18 minutes, turning occasionally, until the center of the meatballs reaches 74°C / 165°F.",
       "Cook the spaghetti according to its packet. Drain and serve with the meatballs and sauce."
     ],
-    "tip": "Wet your hands lightly before shaping the meatballs to reduce sticking."
+    "tip": "Wet your hands lightly before shaping the meatballs to reduce sticking.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "beef-taco-skillet",
@@ -5407,52 +5751,52 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/rice.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "ground beef",
-        "amount": 250.0,
+        "amount": 250,
         "unit": "g"
       },
       {
         "name": "canned black beans, drained",
-        "amount": 120.0,
+        "amount": 120,
         "unit": "g"
       },
       {
         "name": "canned chopped tomatoes",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "bell pepper",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "canned sweetcorn, drained",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
         "name": "ground cumin",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "smoked paprika",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
@@ -5467,7 +5811,11 @@ export const additionalRecipes = [
       "Add the pepper, cumin and paprika and cook for 3 minutes. Stir in the tomatoes, beans, corn and 50 ml water and simmer for 10 minutes, until the beef reaches 71°C / 160°F.",
       "Heat the rice according to its packet until steaming hot. Finish the skillet with lime juice and serve over the rice."
     ],
-    "tip": "Choose lean ground beef for a sauce that does not need much draining."
+    "tip": "Choose lean ground beef for a sauce that does not need much draining.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "turkey-spinach-burgers",
@@ -5481,47 +5829,47 @@ export const additionalRecipes = [
     "diet": [
       "Dairy-free"
     ],
-    "image": "/food/burger.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "ground turkey",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "spinach",
-        "amount": 40.0,
+        "amount": 40,
         "unit": "g"
       },
       {
         "name": "breadcrumbs",
-        "amount": 20.0,
+        "amount": 20,
         "unit": "g"
       },
       {
         "name": "Dijon mustard",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tsp"
       },
       {
         "name": "burger buns",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       },
       {
         "name": "tomato",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "lettuce",
-        "amount": 30.0,
+        "amount": 30,
         "unit": "g"
       },
       {
         "name": "neutral oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       }
     ],
@@ -5531,7 +5879,11 @@ export const additionalRecipes = [
       "Wash and dry the lettuce, slice the tomato and toast the buns lightly.",
       "Spread the remaining mustard over the buns and fill with the patties, lettuce and tomato."
     ],
-    "tip": "Make the patties slightly wider than the buns because they shrink as they cook."
+    "tip": "Make the patties slightly wider than the buns because they shrink as they cook.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "ginger-pork-stir-fry",
@@ -5545,52 +5897,52 @@ export const additionalRecipes = [
     "diet": [
       "Dairy-free"
     ],
-    "image": "/food/rice.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "pork loin",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "cabbage",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "carrot",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "fresh ginger",
-        "amount": 15.0,
+        "amount": 15,
         "unit": "g"
       },
       {
         "name": "garlic",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "cloves"
       },
       {
         "name": "soy sauce",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tbsp"
       },
       {
         "name": "rice vinegar",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "neutral oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       }
     ],
@@ -5600,7 +5952,11 @@ export const additionalRecipes = [
       "Add the remaining oil and stir-fry the cabbage and carrot for 4–5 minutes. Add the ginger and garlic for 30 seconds, then stir in the soy sauce and vinegar.",
       "Return the rested pork and its juices to the pan and toss briefly. Heat the rice according to its packet until steaming hot and serve with the stir-fry."
     ],
-    "tip": "Thin strips cut across the grain stay more tender."
+    "tip": "Thin strips cut across the grain stay more tender.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "sausage-pepper-skillet",
@@ -5615,22 +5971,22 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/chicken.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "fully cooked gluten-free chicken sausage",
-        "amount": 250.0,
+        "amount": 250,
         "unit": "g"
       },
       {
         "name": "potatoes",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "bell pepper",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
@@ -5640,7 +5996,7 @@ export const additionalRecipes = [
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
@@ -5650,7 +6006,7 @@ export const additionalRecipes = [
       },
       {
         "name": "garlic",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "cloves"
       }
     ],
@@ -5660,7 +6016,11 @@ export const additionalRecipes = [
       "Heat the oil in a wide skillet. Cook the potatoes for 6–8 minutes, turning until golden. Add the onion and pepper and cook for 5 minutes.",
       "Add the sausage, paprika and garlic and cook for 4–5 minutes, or according to the sausage packet, until everything is hot throughout."
     ],
-    "tip": "Use fully cooked sausage for this timing; raw sausage needs a different cooking method."
+    "tip": "Use fully cooked sausage for this timing; raw sausage needs a different cooking method.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "lemon-salmon-potatoes",
@@ -5675,27 +6035,27 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/salmon.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "salmon fillets",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "potatoes",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "green beans",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "lemon",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
@@ -5705,7 +6065,7 @@ export const additionalRecipes = [
       },
       {
         "name": "garlic",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "cloves"
       },
       {
@@ -5720,7 +6080,11 @@ export const additionalRecipes = [
       "Sprinkle the salmon with dill and lay lemon slices over it. Roast for another 12–15 minutes until the salmon reaches 63°C / 145°F and the potatoes are tender.",
       "Divide the salmon and vegetables between plates and squeeze over any remaining lemon."
     ],
-    "tip": "Cut the potatoes small so they finish roasting before the fish overcooks."
+    "tip": "Cut the potatoes small so they finish roasting before the fish overcooks.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "garlic-shrimp-pasta",
@@ -5734,27 +6098,27 @@ export const additionalRecipes = [
     "diet": [
       "Dairy-free"
     ],
-    "image": "/food/pasta.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "raw peeled shrimp",
-        "amount": 250.0,
+        "amount": 250,
         "unit": "g"
       },
       {
         "name": "spaghetti",
-        "amount": 180.0,
+        "amount": 180,
         "unit": "g"
       },
       {
         "name": "cherry tomatoes",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
         "name": "garlic",
-        "amount": 3.0,
+        "amount": 3,
         "unit": "cloves"
       },
       {
@@ -5769,7 +6133,7 @@ export const additionalRecipes = [
       },
       {
         "name": "parsley",
-        "amount": 10.0,
+        "amount": 10,
         "unit": "g"
       },
       {
@@ -5784,7 +6148,11 @@ export const additionalRecipes = [
       "Add the shrimp and cook for 2–3 minutes per side, until the flesh is firm, pearly and opaque throughout.",
       "Reserve a cup of pasta water and drain the spaghetti. Toss with the shrimp, lemon juice, chopped parsley and a splash of pasta water."
     ],
-    "tip": "Thaw frozen shrimp in the refrigerator and pat dry before cooking."
+    "tip": "Thaw frozen shrimp in the refrigerator and pat dry before cooking.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "lime-fish-tacos",
@@ -5799,37 +6167,37 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/salmon.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "white fish fillets",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "corn tortillas",
-        "amount": 6.0,
+        "amount": 6,
         "unit": ""
       },
       {
         "name": "cabbage",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
         "name": "avocado",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "lime",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
@@ -5849,7 +6217,11 @@ export const additionalRecipes = [
       "Cook the fish for 3–4 minutes per side, adjusting for thickness, until the center reaches 63°C / 145°F. Break into large pieces.",
       "Warm the tortillas in a dry skillet. Fill with fish, cabbage and avocado and finish with the remaining lime juice."
     ],
-    "tip": "Warm corn tortillas just before filling so they fold without cracking."
+    "tip": "Warm corn tortillas just before filling so they fold without cracking.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "coconut-cod-curry",
@@ -5864,37 +6236,37 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/curry.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "cod fillets",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "bell pepper",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "spinach",
-        "amount": 60.0,
+        "amount": 60,
         "unit": "g"
       },
       {
         "name": "coconut milk",
-        "amount": 250.0,
+        "amount": 250,
         "unit": "ml"
       },
       {
         "name": "gluten-free red curry paste",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "neutral oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
@@ -5904,12 +6276,12 @@ export const additionalRecipes = [
       },
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "water",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "ml"
       }
     ],
@@ -5919,7 +6291,11 @@ export const additionalRecipes = [
       "Lower the heat and add the fish. Simmer gently for 6–8 minutes until the fish reaches 63°C / 145°F, then fold in the spinach until wilted.",
       "Heat the rice according to its packet until steaming hot. Finish the curry with lime juice and serve with the rice."
     ],
-    "tip": "Avoid vigorous stirring once the fish is in the pan so the pieces stay intact."
+    "tip": "Avoid vigorous stirring once the fish is in the pan so the pieces stay intact.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "shrimp-vegetable-rice",
@@ -5933,32 +6309,32 @@ export const additionalRecipes = [
     "diet": [
       "Dairy-free"
     ],
-    "image": "/food/rice.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "raw peeled shrimp",
-        "amount": 250.0,
+        "amount": 250,
         "unit": "g"
       },
       {
         "name": "ready-cooked rice",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "frozen peas",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
         "name": "carrot",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "garlic",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "cloves"
       },
       {
@@ -5968,17 +6344,17 @@ export const additionalRecipes = [
       },
       {
         "name": "neutral oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "sesame oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "scallions",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       }
     ],
@@ -5988,7 +6364,11 @@ export const additionalRecipes = [
       "Add the remaining neutral oil and cook the carrot and peas for 4–5 minutes. Add the garlic for 30 seconds, then the rice and soy sauce.",
       "Stir-fry until the rice reaches 74°C / 165°F throughout. Return the shrimp, toss until hot and finish with sesame oil and sliced scallions."
     ],
-    "tip": "A wide skillet gives the rice enough room to heat evenly."
+    "tip": "A wide skillet gives the rice enough room to heat evenly.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "lentil-shepherds-pie",
@@ -6005,22 +6385,22 @@ export const additionalRecipes = [
       "Dairy-free",
       "Gluten-free"
     ],
-    "image": "/food/curry.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "potatoes",
-        "amount": 500.0,
+        "amount": 500,
         "unit": "g"
       },
       {
         "name": "cooked lentils",
-        "amount": 300.0,
+        "amount": 300,
         "unit": "g"
       },
       {
         "name": "carrot",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
@@ -6030,22 +6410,22 @@ export const additionalRecipes = [
       },
       {
         "name": "frozen peas",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
         "name": "tomato paste",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "gluten-free vegetable stock",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "ml"
       },
       {
         "name": "olive oil",
-        "amount": 2.0,
+        "amount": 2,
         "unit": "tbsp"
       },
       {
@@ -6061,7 +6441,11 @@ export const additionalRecipes = [
       "Drain the potatoes, reserving a little cooking water. Mash with the remaining oil and enough cooking water to soften.",
       "Spread the mash over the filling, roughen the top with a fork and bake for 15–20 minutes until bubbling and lightly golden."
     ],
-    "tip": "A thick filling supports the mashed potato topping better than a watery one."
+    "tip": "A thick filling supports the mashed potato topping better than a watery one.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "black-bean-stuffed-peppers",
@@ -6076,37 +6460,37 @@ export const additionalRecipes = [
       "Vegetarian",
       "Gluten-free"
     ],
-    "image": "/food/rice.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "large bell peppers",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       },
       {
         "name": "canned black beans, drained",
-        "amount": 240.0,
+        "amount": 240,
         "unit": "g"
       },
       {
         "name": "ready-cooked rice",
-        "amount": 250.0,
+        "amount": 250,
         "unit": "g"
       },
       {
         "name": "canned sweetcorn, drained",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
         "name": "salsa",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
         "name": "cheddar",
-        "amount": 60.0,
+        "amount": 60,
         "unit": "g"
       },
       {
@@ -6116,7 +6500,7 @@ export const additionalRecipes = [
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       }
     ],
@@ -6126,7 +6510,11 @@ export const additionalRecipes = [
       "Rinse the beans and mix with the rice, corn, salsa and cumin. Divide between the pepper halves and top with grated cheddar.",
       "Cover and bake for 15 minutes, then uncover and bake for another 5–10 minutes until the peppers are tender and the filling reaches 74°C / 165°F."
     ],
-    "tip": "Choose peppers that sit flat in the dish so the filling stays in place."
+    "tip": "Choose peppers that sit flat in the dish so the filling stays in place.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "sausage-gnocchi-tray",
@@ -6138,42 +6526,42 @@ export const additionalRecipes = [
     "minutes": 35,
     "servings": 2,
     "diet": [],
-    "image": "/food/pasta.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "potato gnocchi",
-        "amount": 400.0,
+        "amount": 400,
         "unit": "g"
       },
       {
         "name": "fully cooked chicken sausage",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "zucchini",
-        "amount": 1.0,
+        "amount": 1,
         "unit": ""
       },
       {
         "name": "cherry tomatoes",
-        "amount": 200.0,
+        "amount": 200,
         "unit": "g"
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "dried oregano",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
         "name": "mozzarella",
-        "amount": 60.0,
+        "amount": 60,
         "unit": "g"
       }
     ],
@@ -6183,7 +6571,11 @@ export const additionalRecipes = [
       "Roast for 20 minutes, turning halfway. Tear the mozzarella over the tray.",
       "Roast for another 5–8 minutes until the vegetables are tender, the gnocchi is cooked through and the sausage is hot according to its packet."
     ],
-    "tip": "Use shelf-stable or refrigerated gnocchi whose packet allows oven cooking."
+    "tip": "Use shelf-stable or refrigerated gnocchi whose packet allows oven cooking.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "black-bean-burgers",
@@ -6199,17 +6591,17 @@ export const additionalRecipes = [
       "Vegetarian",
       "Dairy-free"
     ],
-    "image": "/food/burger.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "canned black beans, drained",
-        "amount": 240.0,
+        "amount": 240,
         "unit": "g"
       },
       {
         "name": "rolled oats",
-        "amount": 40.0,
+        "amount": 40,
         "unit": "g"
       },
       {
@@ -6219,12 +6611,12 @@ export const additionalRecipes = [
       },
       {
         "name": "tomato paste",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "smoked paprika",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
@@ -6234,12 +6626,12 @@ export const additionalRecipes = [
       },
       {
         "name": "neutral oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       },
       {
         "name": "burger buns",
-        "amount": 2.0,
+        "amount": 2,
         "unit": ""
       },
       {
@@ -6249,7 +6641,7 @@ export const additionalRecipes = [
       },
       {
         "name": "lettuce",
-        "amount": 30.0,
+        "amount": 30,
         "unit": "g"
       }
     ],
@@ -6259,7 +6651,11 @@ export const additionalRecipes = [
       "Heat the oil in a nonstick skillet over medium heat. Cook the patties for 4–5 minutes per side until crisp and hot through the middle, turning carefully.",
       "Toast the buns and fill with the patties, sliced avocado and washed lettuce."
     ],
-    "tip": "Dry beans and a short rest help the patties hold together."
+    "tip": "Dry beans and a short rest help the patties hold together.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   },
   {
     "id": "mushroom-bean-stroganoff",
@@ -6273,22 +6669,22 @@ export const additionalRecipes = [
     "diet": [
       "Vegetarian"
     ],
-    "image": "/food/noodles.jpg",
+    "image": "",
     "difficulty": "Easy",
     "ingredients": [
       {
         "name": "mushrooms",
-        "amount": 250.0,
+        "amount": 250,
         "unit": "g"
       },
       {
         "name": "canned white beans, drained",
-        "amount": 240.0,
+        "amount": 240,
         "unit": "g"
       },
       {
         "name": "dried egg noodles",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "g"
       },
       {
@@ -6298,17 +6694,17 @@ export const additionalRecipes = [
       },
       {
         "name": "plain Greek yogurt",
-        "amount": 100.0,
+        "amount": 100,
         "unit": "g"
       },
       {
         "name": "vegetable stock",
-        "amount": 150.0,
+        "amount": 150,
         "unit": "ml"
       },
       {
         "name": "Dijon mustard",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tsp"
       },
       {
@@ -6318,7 +6714,7 @@ export const additionalRecipes = [
       },
       {
         "name": "olive oil",
-        "amount": 1.0,
+        "amount": 1,
         "unit": "tbsp"
       }
     ],
@@ -6328,6 +6724,10 @@ export const additionalRecipes = [
       "Stir in the paprika, mustard, beans and stock. Simmer for 5 minutes, then remove from the heat.",
       "Mix a little warm sauce into the yogurt before folding it into the pan. Drain the noodles and serve with the mushroom sauce."
     ],
-    "tip": "Keep the pan off the heat after adding yogurt so the sauce stays smooth."
+    "tip": "Keep the pan off the heat after adding yogurt so the sauce stays smooth.",
+    "imageCredit": "",
+    "imageSource": "",
+    "imageLicense": "",
+    "imageLicenseUrl": ""
   }
 ];

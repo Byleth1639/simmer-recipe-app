@@ -1,9 +1,7 @@
-# Image credits
+# Recipe image information
 
-Starter recipes are original examples. Food photos are illustrative and may differ from the written recipes.
+The former bundled stock-photo collection has been removed. New recipe images are AI-generated illustrations produced by the configured image service and saved to Cloudinary. The app records image provenance and displays an AI illustration label only after a generated image has been uploaded and associated with a recipe.
 
-- Shakshuka: Toa Heftiba / Unsplash — https://unsplash.com/fr/photos/aliments-cuits-a-la-poele-gWkvURhoMlA
-- Avocado toast: Taylor Friehl / Unsplash — https://unsplash.com/es/fotos/tostada-de-aguacate-con-huevo-duro-y-tomates-secos-al-sol-zU_x3GT4ByQ
-- Pancakes: Chad Montano / Unsplash — https://unsplash.com/photos/person-pouring-syrup-on-pancake-gf9777gaYjs
-- Green salad: Diego Arenas de Rodrigo / Unsplash — https://unsplash.com/photos/green-salad-with-dressing-on-a-plate-lL5QcLV9x3k
-- Pesto pasta: Bulk Mart — https://bulkmart.ca/blogs/foodservice-resources/a-comprehensive-guide-to-types-of-pasta-sauces
+The neutral SVG placeholder and interactive ingredient models are interface illustrations, not AI-generated food photos. Recipe descriptions, ingredient quantities and cooking instructions remain the source for preparing a meal.
+
+Existing custom uploads keep their source metadata. AI photos made using the previous cloud notebook remain available.
