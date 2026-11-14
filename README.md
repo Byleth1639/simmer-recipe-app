@@ -1,23 +1,47 @@
 # Simmer
 
-A MERN recipe app with 105 recipes, search, saved recipes, a shopping list and an interactive ingredient explorer.
+Simmer is a recipe app built with React, TypeScript, Express, and MongoDB. Browse 105 recipes, save favorites, and add ingredients to a shopping list.
+
+## Features
+
+- Search by recipe name or ingredient and filter by diet or cooking time.
+- Enter ingredients you already have to find matching recipes.
+- Adjust the serving size to update ingredient quantities.
+- Select an ingredient to highlight it in the 3D ingredient explorer.
+- Check off ingredients as you prep and follow the cooking steps one at a time.
+
+## Run locally
+
+From the repository root, install the client and server dependencies:
+
+```bash
+npm run setup
+```
+
+Set `MONGODB_URI` to your MongoDB connection string, `APP_ORIGIN` to `http://localhost:5173`, and `PORT` to `3001` in the API process environment. See `env.example` for example values.
+
+Start the API in one terminal:
+
+```bash
+npm start
+```
+
+Start the client in a second terminal:
+
+```bash
+npm run dev
+```
+
+Open [localhost:5173](http://localhost:5173).
 
 ## Recipe photos
 
-Opening a recipe without a photo automatically requests an AI image of that specific dish. For example, **Blueberry lemon pancakes** produces a request describing the pancakes, blueberries, lemon, other ingredients and the final preparation step. The image worker generates it, uploads it to Cloudinary and saves the URL on that recipe in MongoDB. The page checks progress and displays the completed photo. Later visits reuse it.
+Recipes display a saved image when one is available and a placeholder otherwise. The repository includes an optional image service for generating missing recipe illustrations. See [SETUP.md](SETUP.md) for configuration and [CREDITS.md](CREDITS.md) for photo credits.
 
-The source no longer ships the stock food-photo collection. The existing ingredient explorer is preserved. Generated photos and custom uploads already saved in your database are retained.
+## Checks
 
-A cloud image-generation service must be running and connected for new photos to be created. The included `image-service/` is the Stable Diffusion/fastai service this app calls. The app does not connect to a visitor’s ChatGPT session. A neutral placeholder is shown before an image is ready, and an accurate offline message appears when generation is not connected. Saved photos continue to load while the generator is offline.
-
-See **SIMMER-FIX-INSTRUCTIONS.md** for updating the existing site and **SETUP.md** for configuration.
-
-## Commands
-
-- `npm run setup`: install the client and server dependencies.
-- `npm run dev`: start the client; start the API separately with its environment configured.
-- `npm run build`: remove retired stock files that match their original checksums, then build the client.
-- `npm start`: connect MongoDB, retire known stock-photo metadata, and run the API and image worker.
-- `npm run typecheck`, `npm test`, `python tests/notebook-batch.test.py`: validation.
-
-The cloud batch notebook remains an optional way to generate photos ahead of time. It is not required for the on-demand workflow when the image service is connected.
+```bash
+npm test
+npm run typecheck
+npm run build
+```
